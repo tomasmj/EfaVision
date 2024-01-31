@@ -27,30 +27,66 @@ public class Controlador implements ActionListener {
 				sesion = configuracion.buildSessionFactory();
 				System.out.println("Conexion a la base de datos realizada");
 				
-				eliminarMenores(sesion);
-				System.out.println("Eliminar columnas");
+				if(comprobarColumna(sesion, "rango_1_9")) {
+					eliminarMenores(sesion,"rango_1_9");
+					System.out.println("Columna eliminada");
+				}
 				
-				
+				if(comprobarColumna(sesion, "rango_10_17")) {
+					eliminarMenores(sesion,"rango_10_17");
+					System.out.println("Columna eliminada");
+				}
+					
 			} catch(Exception a) {
 				a.printStackTrace();
 				throw a;
+			}finally {
+				if(sesion!=null) {
+					sesion.close();
+				}
 			}
 		}
 	}
 	
-	public void eliminarMenores(SessionFactory sesion) {
-		Session session;
+	public boolean comprobarColumna(SessionFactory sesion, String nombreColumna) {
+		Session session = null;
+		boolean existir = false;
 		try {
 			session = sesion.getCurrentSession();
 			session.beginTransaction();
 
-			Query query = session.createSQLQuery("ALTER TABLE porcentajes_rangoedad DROP COLUMN rango_1_9, DROP COLUMN rango_10_17");
+			Query query = session.createSQLQuery("show columns from porcentajes_rangoedad LIKE '" + nombreColumna + "'");
+			Object resultado = query.uniqueResult();
+			
+			if(resultado!=null) {
+				existir= true;
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(session!=null) {
+				session.close();
+			}
+		}
+		return existir;
+	}
+	
+	public void eliminarMenores(SessionFactory sesion, String nombreColumna) {
+		Session session = null;
+		try {
+			session = sesion.getCurrentSession();
+			session.beginTransaction();
+
+			Query query = session.createSQLQuery("ALTER TABLE porcentajes_rangoedad DROP COLUMN " + nombreColumna);
 			query.executeUpdate();
 
 			session.getTransaction().commit();
-
 		}catch(Exception e) {
 			e.printStackTrace();
+		}finally {
+			if(session!=null) {
+				session.close();
+			}
 		}
 	}
 
