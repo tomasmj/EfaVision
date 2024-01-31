@@ -6,11 +6,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import Controlador.Controlador;
+
+import javax.swing.JButton;
+
 public class Vista extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-
+	public JButton Simular;
 	/**
 	 * Launch the application.
 	 */
@@ -19,6 +23,7 @@ public class Vista extends JFrame {
 			public void run() {
 				try {
 					Vista frame = new Vista();
+					Controlador controlador = new Controlador(frame);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -32,11 +37,14 @@ public class Vista extends JFrame {
 	 */
 	public Vista() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 600, 629);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
+		
+		 Simular = new JButton("New button");
+		contentPane.add(Simular);
 	}
 
 }
