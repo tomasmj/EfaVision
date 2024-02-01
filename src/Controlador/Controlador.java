@@ -1,6 +1,8 @@
 package Controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.text.View;
 
@@ -27,14 +29,14 @@ public class Controlador implements ActionListener {
 				sesion = configuracion.buildSessionFactory();
 				System.out.println("Conexion a la base de datos realizada");
 				
-				if(comprobarColumna(sesion, "rango_1_9")) {
-					eliminarMenores(sesion,"rango_1_9");
-					System.out.println("Columna eliminada");
-				}
-				
-				if(comprobarColumna(sesion, "rango_10_17")) {
-					eliminarMenores(sesion,"rango_10_17");
-					System.out.println("Columna eliminada");
+				List<PorcentajesRangoedad> porcentajes = obtenerPorcentajes(sesion);
+				for(int i=0;i<porcentajes.size();i++) {
+					int votos18=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRango1825()/100))/500000);
+					Cliente c1 = new Cliente(18, 25, votos18);
+					c1.votar();
+					int votos26=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRango2640()/100))/500000);
+					int votos41=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRango4165()/100))/500000);
+					int votos66=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRangoMas66()/100))/500000);
 				}
 					
 			} catch(Exception a) {
@@ -48,19 +50,16 @@ public class Controlador implements ActionListener {
 		}
 	}
 	
-	public boolean comprobarColumna(SessionFactory sesion, String nombreColumna) {
+	public List<PorcentajesRangoedad> obtenerPorcentajes(SessionFactory sesion){
+		List<PorcentajesRangoedad> porcentajes = null;
 		Session session = null;
-		boolean existir = false;
 		try {
-			session = sesion.getCurrentSession();
+			session=sesion.getCurrentSession();
 			session.beginTransaction();
-
-			Query query = session.createSQLQuery("show columns from porcentajes_rangoedad LIKE '" + nombreColumna + "'");
-			Object resultado = query.uniqueResult();
 			
-			if(resultado!=null) {
-				existir= true;
-			}
+			Query query = sesion.getCurrentSession().createQuery("FROM PorcentajesRangoedad");
+			porcentajes=query.list();
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
@@ -68,26 +67,6 @@ public class Controlador implements ActionListener {
 				session.close();
 			}
 		}
-		return existir;
+		return porcentajes;
 	}
-	
-	public void eliminarMenores(SessionFactory sesion, String nombreColumna) {
-		Session session = null;
-		try {
-			session = sesion.getCurrentSession();
-			session.beginTransaction();
-
-			Query query = session.createSQLQuery("ALTER TABLE porcentajes_rangoedad DROP COLUMN " + nombreColumna);
-			query.executeUpdate();
-
-			session.getTransaction().commit();
-		}catch(Exception e) {
-			e.printStackTrace();
-		}finally {
-			if(session!=null) {
-				session.close();
-			}
-		}
-	}
-
 }
