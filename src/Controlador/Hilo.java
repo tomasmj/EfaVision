@@ -43,7 +43,7 @@ public class Hilo extends Thread{
 				}
 			}
 			numVoto--;
-			Hilo.sleep(2000);
+			Hilo.sleep(200);
 		}
 		
 		return resultado;
@@ -61,7 +61,7 @@ public class Hilo extends Thread{
 			String numVotos = br.readLine();
 			String resultado= votar(edad1,edad2,numVotos);
 			pw = new PrintWriter(socket.getOutputStream());
-			pw.write(resultado);
+			pw.write(resultado + "\n");
 			pw.flush();
 		}catch(Exception e) {
 			e.printStackTrace();

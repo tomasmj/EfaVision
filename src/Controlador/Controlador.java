@@ -35,8 +35,14 @@ public class Controlador implements ActionListener {
 					Cliente c1 = new Cliente(18, 25, votos18);
 					c1.votar();
 					int votos26=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRango2640()/100))/500000);
+					Cliente c2 = new Cliente(26, 40, votos26);
+					c2.votar();
 					int votos41=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRango4165()/100))/500000);
+					Cliente c3 = new Cliente(41, 65, votos41);
+					c3.votar();
 					int votos66=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRangoMas66()/100))/500000);
+					Cliente c4 = new Cliente(66, 120, votos66);
+					c4.votar();
 				}
 					
 			} catch(Exception a) {
