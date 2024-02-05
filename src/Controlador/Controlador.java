@@ -47,7 +47,8 @@ public class Controlador implements ActionListener {
 					while(votos18>0) {
 						Puntos hilo = new Puntos(18);
 						hilo.start();
-						String pais = hilo.votar();
+						hilo.join();
+						String pais = hilo.getPais();
 						for(int j=0;j<puntos.size();j++) {
 							if(puntos.get(j).getPais().equalsIgnoreCase(pais)) {
 								puntos.get(j).setPuntos(puntos.get(j).getPuntos()+1);
@@ -60,7 +61,8 @@ public class Controlador implements ActionListener {
 					while(votos26>0) {
 						Puntos hilo = new Puntos(26);
 						hilo.start();
-						String pais = hilo.votar();
+						hilo.join();
+						String pais = hilo.getPais();
 						for(int j=0;j<puntos.size();j++) {
 							if(puntos.get(j).getPais().equalsIgnoreCase(pais)) {
 								puntos.get(j).setPuntos(puntos.get(j).getPuntos()+1);
@@ -72,7 +74,8 @@ public class Controlador implements ActionListener {
 					while(votos41>0) {
 						Puntos hilo = new Puntos(41);
 						hilo.start();
-						String pais = hilo.votar();
+						hilo.join();
+						String pais = hilo.getPais();
 						for(int j=0;j<puntos.size();j++) {
 							if(puntos.get(j).getPais().equalsIgnoreCase(pais)) {
 								puntos.get(j).setPuntos(puntos.get(j).getPuntos()+1);
@@ -84,7 +87,8 @@ public class Controlador implements ActionListener {
 					while(votos66>0) {
 						Puntos hilo = new Puntos(66);
 						hilo.start();
-						String pais = hilo.votar();
+						hilo.join();
+						String pais = hilo.getPais();
 						for(int j=0;j<puntos.size();j++) {
 							if(puntos.get(j).getPais().equalsIgnoreCase(pais)) {
 								puntos.get(j).setPuntos(puntos.get(j).getPuntos()+1);
@@ -99,6 +103,8 @@ public class Controlador implements ActionListener {
 			        String pais2=puntos.get(1).getPais();
 			        String pais3=puntos.get(2).getPais();
 			        insertarFavoritos(sesion, paisVotando, pais1, pais2, pais3);
+			        puntos.removeAll(puntos);
+			        iniciarLista();
 				}					
 			} catch(Exception a) {
 				a.printStackTrace();
