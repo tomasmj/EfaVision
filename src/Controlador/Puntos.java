@@ -1,22 +1,17 @@
 package Controlador;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
-import java.util.ArrayList;
+import java.util.HashMap;
 
-public class Hilo extends Thread{
-	public Socket socket;
-	
-	public Hilo(Socket socket) {
-		this.socket = socket;
+public class Puntos extends Thread {
+
+	public void run( )   {
+		
 	}
-
-	public String votar (String edad1) throws InterruptedException {
+	
+	public String votar (String edad) throws InterruptedException {
 		String resultado = "Todo ok";
 			int randomn = (int)(1+Math.random()*100);
-			if(Integer.parseInt(edad1)==18) {
+			if(Integer.parseInt(edad)==18) {
 				if(randomn>=1 && randomn<=7) {
 					
 					System.out.println("España");
@@ -39,7 +34,7 @@ public class Hilo extends Thread{
 				}else if(randomn>=96 && randomn<=100) {
 					System.out.println("Grecia");
 				}
-			}else if(Integer.parseInt(edad1)==26) {
+			}else if(Integer.parseInt(edad)==26) {
 				if(randomn>=1 && randomn<=14) {
 					System.out.println("España");
 				}else if(randomn>=15 && randomn<=20) {
@@ -61,7 +56,7 @@ public class Hilo extends Thread{
 				}else if(randomn>=91 && randomn<=100) {
 					System.out.println("Grecia");
 				}
-			}else if(Integer.parseInt(edad1)==41) {
+			}else if(Integer.parseInt(edad)==41) {
 				if(randomn>=1 && randomn<=5) {
 					System.out.println("España");
 				}else if(randomn>=6 && randomn<=15) {
@@ -83,7 +78,7 @@ public class Hilo extends Thread{
 				}else if(randomn>=89 && randomn<=100) {
 					System.out.println("Grecia");
 				}
-			}else if(Integer.parseInt(edad1)==66) {
+			}else if(Integer.parseInt(edad)==66) {
 				if(randomn>=1 && randomn<=3) {
 					System.out.println("España");
 				}else if(randomn>=4 && randomn<=20) {
@@ -109,30 +104,4 @@ public class Hilo extends Thread{
 		return resultado;
 	}
 	
-	public void escuchar() {
-		InputStreamReader isr;
-		BufferedReader br;
-		PrintWriter pw;
-		try {
-			isr = new InputStreamReader(socket.getInputStream());
-			br = new BufferedReader(isr);
-			String edad1 = br.readLine();
-			String resultado= votar(edad1);
-			pw = new PrintWriter(socket.getOutputStream());
-			pw.write(resultado + "\n");
-			pw.flush();
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	public void run() {
-		escuchar();
-		try {
-			Hilo.sleep(200);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 }

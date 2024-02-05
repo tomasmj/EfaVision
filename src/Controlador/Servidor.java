@@ -2,9 +2,11 @@ package Controlador;
 
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 
 public class Servidor {
 	public static void main (String [] args) {
+
 		ServerSocket server;
 		try {
 			server = new ServerSocket(9876);

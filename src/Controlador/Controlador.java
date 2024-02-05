@@ -18,6 +18,7 @@ public class Controlador implements ActionListener {
 	public Controlador(Vista vista) {
 		this.vista = vista;
 		vista.Simular.addActionListener(this);
+		
 	}
 	
 	@Override
@@ -25,11 +26,13 @@ public class Controlador implements ActionListener {
 		if(vista.Simular == e.getSource()) {
 			SessionFactory sesion = null;
 			try {
+				
 				Configuration configuracion = new Configuration();
 				configuracion.configure("hibernate.cfg.xml");
 				sesion = configuracion.buildSessionFactory();
 				System.out.println("Conexion a la base de datos realizada");
-				
+				Puntos hilo = new Puntos();
+				hilo.start();
 				List<PorcentajesRangoedad> porcentajes = obtenerPorcentajes(sesion);
 				for(int i=0;i<porcentajes.size();i++) {
 					int votos18=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRango1825()/100))/500000);
