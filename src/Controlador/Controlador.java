@@ -19,6 +19,7 @@ public class Controlador implements ActionListener {
 		this.vista = vista;
 		vista.Simular.addActionListener(this);
 	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(vista.Simular == e.getSource()) {

@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 import Controlador.Controlador;
 
 import javax.swing.JButton;
+import java.awt.Font;
 
 public class Vista extends JFrame {
 
@@ -42,8 +43,11 @@ public class Vista extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
+		 contentPane.setLayout(null);
 		
-		 Simular = new JButton("New button");
+		 Simular = new JButton("SIMULAR");
+		 Simular.setFont(new Font("Tahoma", Font.BOLD, 25));
+		 Simular.setBounds(207, 476, 185, 43);
 		contentPane.add(Simular);
 	}
 
