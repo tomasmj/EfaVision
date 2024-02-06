@@ -26,7 +26,7 @@ public class Hilo extends Thread{
 			InputStreamReader isr = new InputStreamReader(socket.getInputStream());
 			BufferedReader br = new BufferedReader(isr);
 			String tipo= br.readLine();
-
+			
 			if(tipo.equals("favorito")) {
 				String votante = br.readLine();
 				String pais1 = br.readLine();
