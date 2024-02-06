@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
 import javax.swing.text.View;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -40,6 +38,11 @@ public class Controlador implements ActionListener {
 				crearTablaPuntos(sesion);
 				System.out.println("Crear tabla puntos");
 				List<PorcentajesRangoedad> porcentajes = obtenerPorcentajes(sesion);
+				for(int i = 0;i<porcentajes.size();i++) {
+					insertarPaises(sesion, porcentajes.get(i).getNombrePais());
+
+				}
+
 				for(int i=0;i<porcentajes.size();i++) {
 					String paisVotando=porcentajes.get(i).getNombrePais();
 					System.out.println(paisVotando);
@@ -100,12 +103,24 @@ public class Controlador implements ActionListener {
 			        System.out.println(puntos.toString());
 
 			        String pais1=puntos.get(0).getPais();
+			        updatePuntos(sesion, pais1, 15);
+
 			        String pais2=puntos.get(1).getPais();
+			        updatePuntos(sesion, pais2, 10 );
+
 			        String pais3=puntos.get(2).getPais();
+			        updatePuntos(sesion, pais3, 8);
+			        
 			        insertarFavoritos(sesion, paisVotando, pais1, pais2, pais3);
+			        Cliente c = new Cliente("favorito",paisVotando, pais1, pais2, pais3);
+			        c.votar();
+			        
 			        puntos.removeAll(puntos);
 			        iniciarLista();
-				}					
+				}	
+				String ganador = devolverGanador(sesion);
+				Cliente c1 = new Cliente("ganador",ganador);
+				c1.votar();
 			} catch(Exception a) {
 				a.printStackTrace();
 			}finally {
@@ -115,7 +130,23 @@ public class Controlador implements ActionListener {
 			}
 		}
 	}
-	
+	public String devolverGanador(SessionFactory session) {
+		String ganador = null;
+		Session sesion;
+		try {
+			sesion=session.getCurrentSession();
+			sesion.beginTransaction();
+			
+			Query query = sesion.createSQLQuery("select PAIS from puntos_totales order by PUNTOS desc limit 1");
+			ganador = (String) query.getSingleResult();
+			sesion.getTransaction().commit();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return ganador;
+	}
 	public void crearTablaPuntos(SessionFactory session) {
 		Session sesion;
 		try {
@@ -134,6 +165,24 @@ public class Controlador implements ActionListener {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void insertarPaises(SessionFactory session, String pais) {
+		Session sesion = null;
+		try {
+			sesion=session.getCurrentSession();
+			sesion.beginTransaction();
+			
+			Query query = sesion.createSQLQuery("insert into puntos_totales(PAIS,PUNTOS) values (:pais, 0);");
+			query.setParameter("pais", pais);
+			query.executeUpdate();
+			
+			sesion.getTransaction().commit();
+		}catch(Exception e) {
+			e.printStackTrace();
+			sesion.getTransaction().getRollbackOnly();
+		}
+		
 	}
 	
 	public void insertarFavoritos(SessionFactory session,String pais,String favorito1,String favorito2,String favorito3) {
@@ -176,6 +225,26 @@ public class Controlador implements ActionListener {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void updatePuntos(SessionFactory session, String pais, int puntos) {
+		Session sesion;
+		try {
+			sesion=session.getCurrentSession();
+			sesion.beginTransaction();
+			
+			Query query = sesion.createSQLQuery("update puntos_totales\r\n"
+					+ "set PUNTOS = :puntos + PUNTOS\r\n"
+					+ "where PAIS = :pais");
+			query.setParameter("puntos", puntos);
+			query.setParameter("pais", pais);
+			query.executeUpdate();
+			
+			sesion.getTransaction().commit();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 	public void iniciarLista() {

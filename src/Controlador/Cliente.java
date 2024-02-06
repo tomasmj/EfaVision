@@ -8,12 +8,23 @@ import java.net.Socket;
 
 public class Cliente {
 	private int edad1,numVotos;
+	String votante;
+	String ganador;
+	String favorito1, favorito2, favorito3;
+	String tipo;
+	public Cliente(String tipo, String votante, String favorito1, String favorito2, String favorito3) {
+		this.tipo = tipo;
+		this.votante = votante;
+		this.favorito1=favorito1;
+		this.favorito2=favorito2;
+		this.favorito3=favorito3;
 
-	public Cliente(int edad1, int numVotos) {
-		this.edad1 = edad1;
-		this.numVotos = numVotos;
 	}
-	
+	public Cliente(String tipo, String ganador) {
+		this.tipo=tipo;
+		this.ganador = ganador;
+		
+	}
 	public void votar() {
 		Socket socket;
 		InputStreamReader isr;
@@ -21,18 +32,25 @@ public class Cliente {
 		PrintWriter pw;
 		try {
 			InetSocketAddress conexion = new InetSocketAddress("localhost", 9876);
-			while(numVotos>0) {
+			if(tipo.equals("ganador")) {
 				socket = new Socket();
 				socket.connect(conexion);
 				pw = new PrintWriter(socket.getOutputStream());
-				pw.write(edad1 + "\n");
+				pw.write(tipo + "\n");
+				pw.write(ganador + "\n");
 				pw.flush();
-				isr = new InputStreamReader(socket.getInputStream());
-				br = new BufferedReader(isr);
-				String resultado= br.readLine();
-				System.out.println(resultado);
-				numVotos--;
-			}	
+			} else if(tipo.equals("favorito")){
+				socket = new Socket();
+				socket.connect(conexion);
+				pw = new PrintWriter(socket.getOutputStream());
+				pw.write(tipo + "\n");
+				pw.write(votante + "\n");
+				pw.write(favorito1 + "\n");
+				pw.write(favorito2+ "\n");
+				pw.write(favorito3+ "\n");
+				pw.flush();
+			}
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
