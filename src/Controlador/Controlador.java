@@ -20,13 +20,13 @@ public class Controlador implements ActionListener {
 	
 	public Controlador(Vista vista) {
 		this.vista = vista;
-		vista.Simular.addActionListener(this);
+		vista.btnSimularVotaciones.addActionListener(this);
 		iniciarLista();
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(vista.Simular == e.getSource()) {
+		if(vista.btnSimularVotaciones == e.getSource()) {
 			SessionFactory sesion = null;
 			try {
 				Configuration configuracion = new Configuration();
