@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import javax.swing.text.View;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -114,13 +117,15 @@ public class Controlador implements ActionListener {
 			        insertarFavoritos(sesion, paisVotando, pais1, pais2, pais3);
 			        Cliente c = new Cliente("favorito",paisVotando, pais1, pais2, pais3);
 			        c.votar();
-			        
+			        vista.progressBar.setValue(vista.progressBar.getValue()+ 10);
 			        puntos.removeAll(puntos);
 			        iniciarLista();
 				}	
 				String ganador = devolverGanador(sesion);
 				Cliente c1 = new Cliente("ganador",ganador);
 				c1.votar();
+				esperar();
+			
 			} catch(Exception a) {
 				a.printStackTrace();
 			}finally {
@@ -130,6 +135,17 @@ public class Controlador implements ActionListener {
 			}
 		}
 	}
+	public  void esperar() {
+        Timer timer = new Timer(); 
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+            	vista.panelInicial.setVisible(false);
+				vista.panelVotaciones.setVisible(true);
+            }
+        };
+        timer.schedule(task, 1000);
+   }
 	public String devolverGanador(SessionFactory session) {
 		String ganador = null;
 		Session sesion;

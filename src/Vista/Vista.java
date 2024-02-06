@@ -16,6 +16,7 @@ import javax.swing.JProgressBar;
 import javax.swing.JMenuItem;
 import javax.swing.JMenuBar;
 import javax.swing.JSeparator;
+import java.awt.Color;
 
 public class Vista extends JFrame {
 
@@ -23,6 +24,7 @@ public class Vista extends JFrame {
 	public JPanel contentPane,panelVotaciones,panelInicial;
 	public JButton btnSimularVotaciones;
 	public JLabel lblFondo;
+	public JProgressBar progressBar;
 	/**
 	 * Launch the application.
 	 */
@@ -55,7 +57,9 @@ public class Vista extends JFrame {
 		 contentPane.add(panelInicial);
 		 panelInicial.setLayout(null);
 		 
-		 JProgressBar progressBar = new JProgressBar();
+		  progressBar = new JProgressBar();
+		  progressBar.setBackground(Color.BLACK);
+		  progressBar.setStringPainted(true);
 		 progressBar.setBounds(301, 623, 325, 31);
 		 panelInicial.add(progressBar);
 		 

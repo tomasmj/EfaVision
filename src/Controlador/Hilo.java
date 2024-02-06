@@ -36,6 +36,7 @@ public class Hilo extends Thread{
 				System.out.println("1º" + pais1);
 				System.out.println("2º" + pais2);
 				System.out.println("3º" +pais3);
+				
 			} else if((tipo.equals("ganador"))) {
 				String ganador = br.readLine();
 				System.out.println("EL GANADOR DE EFAVISION ES: " + ganador);
