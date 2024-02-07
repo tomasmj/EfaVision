@@ -1,6 +1,8 @@
 package Controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -36,6 +38,8 @@ public class Controlador implements ActionListener {
 				configuracion.configure("hibernate.cfg.xml");
 				sesion = configuracion.buildSessionFactory();
 				System.out.println("Conexion a la base de datos realizada");
+				DropFavoritos(sesion);
+				DropPuntos(sesion);
 				crearTablaFavoritos(sesion);
 				System.out.println("Crear tabla favoritos");
 				crearTablaPuntos(sesion);
@@ -262,7 +266,36 @@ public class Controlador implements ActionListener {
 		}
 		
 	}
-	
+	public void DropPuntos(SessionFactory session) {
+		Session sesion = null;
+		try {
+			sesion=session.getCurrentSession();
+			sesion.beginTransaction();
+			Query query = sesion.createSQLQuery("DROP TABLE IF EXISTS FAVORITOS;");
+			query.executeUpdate();
+		} catch (Exception e) {
+            // En caso de error, realizar rollback
+            if (sesion != null) {
+                sesion.getTransaction().rollback();
+            }
+            e.printStackTrace();
+        }
+	}
+	public void DropFavoritos(SessionFactory session) {
+		Session sesion = null;
+		try {
+			sesion=session.getCurrentSession();
+			sesion.beginTransaction();
+			Query query = sesion.createSQLQuery("DROP TABLE IF EXISTS puntos_totales;");
+			query.executeUpdate();
+        } catch (Exception e) {
+            // En caso de error, realizar rollback
+            if (sesion != null) {
+                sesion.getTransaction().rollback();
+            }
+            e.printStackTrace();
+        }
+	}
 	public void iniciarLista() {
 		puntos.add(new PaisPuntos("Alemania",0));
 		puntos.add(new PaisPuntos("España",0));
