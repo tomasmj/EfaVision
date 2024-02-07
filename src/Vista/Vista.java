@@ -36,6 +36,7 @@ public class Vista extends JFrame {
 	lblPaisGrecia1, lblCantanteGrecia1, lblPaisGrecia2, lblCantanteGrecia2, lblPaisGrecia3, lblPuntuacionGrecia3, lblCantanteGrecia3, lblBanderaPaisesBajos, lblPasesBajos, lblPuntuacionPaisesBajos1, 
 	lblPaisPaisesBajos1, lblCantantePaisesBajos1, lblPaisPaisesBajos2, lblCantantePaisesBajos2, lblPuntuacionPaisesBajos2, lblPuntuacionPaisesBajos3, lblPaisPaisesBajos3, lblCantantePaisesBajos3;
 	public JProgressBar progressBar;
+	//
 
 	/**
 	 * Launch the application.
