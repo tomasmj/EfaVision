@@ -26,6 +26,8 @@ public class Controlador implements ActionListener {
 	public Controlador(Vista vista) {
 		this.vista = vista;
 		vista.btnSimularVotaciones.addActionListener(this);
+		vista.btnAtras.addActionListener(this);
+		vista.btnSiguiente.addActionListener(this);
 		iniciarLista();
 	}
 	
@@ -33,6 +35,7 @@ public class Controlador implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if(vista.btnSimularVotaciones == e.getSource()) {
 			SessionFactory sesion = null;
+			
 			try {
 				Configuration configuracion = new Configuration();
 				configuracion.configure("hibernate.cfg.xml");
@@ -138,7 +141,19 @@ public class Controlador implements ActionListener {
 				}
 			}
 		}
+		if (vista.btnSiguiente == e.getSource()) {
+			this.vista.panelVotaciones.setVisible(false);
+			this.vista.panelVotaciones2.setVisible(true);
+			this.vista.panelInicial.setVisible(false);
+		}
+		if (vista.btnAtras == e.getSource()) {
+			this.vista.panelVotaciones.setVisible(true);
+			this.vista.panelVotaciones2.setVisible(false);
+			this.vista.panelInicial.setVisible(false);
+		}
+		
 	}
+	
 	public  void esperar() {
         Timer timer = new Timer(); 
         TimerTask task = new TimerTask() {
