@@ -157,9 +157,9 @@ public class Controlador implements ActionListener {
 			        	vista.lblPaisGrecia1 .setText(pais1);
 			        	vista.lblCantanteGrecia1.setIcon(new ImageIcon("src/Cantantes/"+cantante1+".png"));
 			        	vista.lblPaisGrecia2.setText(pais2);
-			        	vista.lblCantanteGrecia1.setIcon(new ImageIcon("src/Cantantes/"+cantante2+".png"));
+			        	vista.lblCantanteGrecia2.setIcon(new ImageIcon("src/Cantantes/"+cantante2+".png"));
 			        	vista.lblPaisGrecia3.setText(pais3);
-			        	vista.lblCantanteGrecia1.setIcon(new ImageIcon("src/Cantantes/"+cantante3+".png"));
+			        	vista.lblCantanteGrecia3.setIcon(new ImageIcon("src/Cantantes/"+cantante3+".png"));
 			        }else if(paisVotando.equalsIgnoreCase("Italia")) {
 			        	vista.lblPaisItalia1.setText(pais1);
 			        	vista.lblCantanteItalia1.setIcon(new ImageIcon("src/Cantantes/"+cantante1+".png"));
@@ -167,7 +167,7 @@ public class Controlador implements ActionListener {
 			        	vista.lblCantanteItalia2.setIcon(new ImageIcon("src/Cantantes/"+cantante2+".png"));
 			        	vista.lblPaisItalia3.setText(pais3);
 			        	vista.lblCantanteItalia3.setIcon(new ImageIcon("src/Cantantes/"+cantante3+".png"));
-			        }else if(paisVotando.equalsIgnoreCase("Espania")) {
+			        }else if(paisVotando.equalsIgnoreCase("España")) {
 			        	vista.lblPaisEspaña1.setText(pais1);
 			        	vista.lblCantanteEspaña1.setIcon(new ImageIcon("src/Cantantes/"+cantante1+".png"));
 			        	vista.lblPaisEspaña2.setText(pais2);
