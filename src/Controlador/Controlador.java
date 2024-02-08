@@ -167,7 +167,7 @@ public class Controlador implements ActionListener {
 			        	vista.lblCantanteItalia2.setIcon(new ImageIcon("src/Cantantes/"+cantante2+".png"));
 			        	vista.lblPaisItalia3.setText(pais3);
 			        	vista.lblCantanteItalia3.setIcon(new ImageIcon("src/Cantantes/"+cantante3+".png"));
-			        }else if(paisVotando.equalsIgnoreCase("España")) {
+			        }else if(paisVotando.equalsIgnoreCase("Espania")) {
 			        	vista.lblPaisEspaña1.setText(pais1);
 			        	vista.lblCantanteEspaña1.setIcon(new ImageIcon("src/Cantantes/"+cantante1+".png"));
 			        	vista.lblPaisEspaña2.setText(pais2);
@@ -449,12 +449,12 @@ public class Controlador implements ActionListener {
 	}
 	public void iniciarLista() {
 		puntos.add(new PaisPuntos("Alemania",0));
-		puntos.add(new PaisPuntos("España",0));
+		puntos.add(new PaisPuntos("Espania",0));
 		puntos.add(new PaisPuntos("Italia",0));
 		puntos.add(new PaisPuntos("Francia",0));
 		puntos.add(new PaisPuntos("Portugal",0));
-		puntos.add(new PaisPuntos("Paises bajos",0));
-		puntos.add(new PaisPuntos("Reino unido",0));
+		puntos.add(new PaisPuntos("Paises Bajos",0));
+		puntos.add(new PaisPuntos("Reino Unido",0));
 		puntos.add(new PaisPuntos("Grecia",0));
 		puntos.add(new PaisPuntos("Rumania",0));
 		puntos.add(new PaisPuntos("Polonia",0));
