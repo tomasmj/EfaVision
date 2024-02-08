@@ -54,8 +54,7 @@ public class Vista extends JFrame {
 			lblPaisClasificacion2, lblPaisClasificacion3, lblPaisClasificacion4, lblPaisClasificacion5;
 	public JProgressBar progressBar;
 
-	//
-	//
+	
 	/**
 	 * Launch the application.
 	 */
