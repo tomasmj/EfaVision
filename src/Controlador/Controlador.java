@@ -137,7 +137,7 @@ public class Controlador implements ActionListener {
 			        	vista.lblCantanteAlemania1.setIcon(new ImageIcon("src/Cantantes/"+cantante1+".png"));
 			        	vista.lblPaisAlemania2.setText(pais2);
 			        	vista.lblCantanteAlemania2.setIcon(new ImageIcon("src/Cantantes/"+cantante2+".png"));
-			        	vista.lblPaisAlemania2.setText(pais3);
+			        	vista.lblPaisAlemania3.setText(pais3);
 			        	vista.lblCantanteAlemania3.setIcon(new ImageIcon("src/Cantantes/"+cantante3+".png"));
 			        }else if(paisVotando.equalsIgnoreCase("Francia")) {
 			        	vista.lblPaisFrancia1.setText(pais1);
@@ -248,18 +248,22 @@ public class Controlador implements ActionListener {
 	
 	public String devolverCantante(SessionFactory session,String pais) {
 		String cantante = null;
-	Session sesion;
+	Session sesion = null;
 	try {
 		sesion=session.getCurrentSession();
 		sesion.beginTransaction();
 		
-		Query query = sesion.createSQLQuery("SELECT NOMBRE FROM CANTANTE WHERE PAIS = :PAIS");
+		Query query = sesion.createSQLQuery("SELECT NOMBRE FROM CANTANTES WHERE PAIS = :PAIS");
 		query.setParameter("PAIS", pais);
 		cantante = (String) query.getSingleResult();
 		sesion.getTransaction().commit();
 	}catch(Exception e) {
 		e.printStackTrace();
-	}
+	}finally {
+    	if(sesion!=null) {
+    		sesion.close();
+    	}
+    }
 	
 	
 	return cantante;
@@ -267,7 +271,7 @@ public class Controlador implements ActionListener {
 	
 	public String devolverGanador(SessionFactory session) {
 		String ganador = null;
-		Session sesion;
+		Session sesion = null;
 		try {
 			sesion=session.getCurrentSession();
 			sesion.beginTransaction();
@@ -277,13 +281,17 @@ public class Controlador implements ActionListener {
 			sesion.getTransaction().commit();
 		}catch(Exception e) {
 			e.printStackTrace();
-		}
+		}finally {
+        	if(sesion!=null) {
+        		sesion.close();
+        	}
+        }
 		
 		
 		return ganador;
 	}
 	public void crearTablaPuntos(SessionFactory session) {
-		Session sesion;
+		Session sesion = null;
 		try {
 			sesion=session.getCurrentSession();
 			sesion.beginTransaction();
@@ -299,7 +307,11 @@ public class Controlador implements ActionListener {
 			sesion.getTransaction().commit();
 		}catch(Exception e) {
 			e.printStackTrace();
-		}
+		}finally {
+        	if(sesion!=null) {
+        		sesion.close();
+        	}
+        }
 	}
 	
 	public void insertarPaises(SessionFactory session, String pais) {
@@ -316,12 +328,16 @@ public class Controlador implements ActionListener {
 		}catch(Exception e) {
 			e.printStackTrace();
 			sesion.getTransaction().getRollbackOnly();
-		}
+		}finally {
+        	if(sesion!=null) {
+        		sesion.close();
+        	}
+        }
 		
 	}
 	
 	public void insertarFavoritos(SessionFactory session,String pais,String favorito1,String favorito2,String favorito3) {
-		Session sesion;
+		Session sesion = null;
 		try {
 			sesion=session.getCurrentSession();
 			sesion.beginTransaction();
@@ -337,11 +353,15 @@ public class Controlador implements ActionListener {
 			sesion.getTransaction().commit();
 		}catch(Exception e) {
 			e.printStackTrace();
-		}
+		}finally {
+        	if(sesion!=null) {
+        		sesion.close();
+        	}
+        }
 	}
 	
 	public void crearTablaFavoritos(SessionFactory session) {
-		Session sesion;
+		Session sesion = null;
 		try {
 			sesion=session.getCurrentSession();
 			sesion.beginTransaction();
@@ -359,11 +379,15 @@ public class Controlador implements ActionListener {
 			sesion.getTransaction().commit();
 		}catch(Exception e) {
 			e.printStackTrace();
-		}
+		}finally {
+        	if(sesion!=null) {
+        		sesion.close();
+        	}
+        }
 	}
 	
 	public void updatePuntos(SessionFactory session, String pais, int puntos) {
-		Session sesion;
+		Session sesion = null;
 		try {
 			sesion=session.getCurrentSession();
 			sesion.beginTransaction();
@@ -378,7 +402,11 @@ public class Controlador implements ActionListener {
 			sesion.getTransaction().commit();
 		}catch(Exception e) {
 			e.printStackTrace();
-		}
+		}finally {
+        	if(sesion!=null) {
+        		sesion.close();
+        	}
+        }
 		
 	}
 	public void DropPuntos(SessionFactory session) {
@@ -394,6 +422,10 @@ public class Controlador implements ActionListener {
                 sesion.getTransaction().rollback();
             }
             e.printStackTrace();
+        }finally {
+        	if(sesion!=null) {
+        		sesion.close();
+        	}
         }
 	}
 	public void DropFavoritos(SessionFactory session) {
@@ -409,6 +441,10 @@ public class Controlador implements ActionListener {
                 sesion.getTransaction().rollback();
             }
             e.printStackTrace();
+        }finally {
+        	if(sesion!=null) {
+        		sesion.close();
+        	}
         }
 	}
 	public void iniciarLista() {

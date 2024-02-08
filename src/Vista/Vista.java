@@ -45,16 +45,16 @@ public class Vista extends JFrame {
 			lblPaisGrecia3, lblPuntuacionGrecia3, lblCantanteGrecia3, lblBanderaPaisesBajos, lblPasesBajos,
 			lblPuntuacionPaisesBajos1, lblPaisPaisesBajos1, lblCantantePaisesBajos1, lblPaisPaisesBajos2,
 			lblCantantePaisesBajos2, lblPuntuacionPaisesBajos2, lblPuntuacionPaisesBajos3, lblPaisPaisesBajos3,
-			lblCantantePaisesBajos3, lblPaisClasificacion6, lblPaisClasificacion7, lblPaisClasificacion8, lblPaisClasificacion9,
-			lblPaisClasificacion10, lblCantanteClasificacion1, lblCantanteClasificacion2, lblCantanteClasificacion3, lblCantanteClasificacion4, 
-			lblCantanteClasificacion5, lblCantanteClasificacion5_1, lblCantanteClasificacion5_2, lblClasificacion, 
-			lblCantanteClasificacion5_3, lblCantanteClasificacion5_4, lblCantanteClasificacion5_5, lblClasificacion1,
-			lblClasificacion2, lblClasificacion3, lblClasificacion4, lblClasificacion5, lblClasificacion10, 
-			lblClasificacion9, lblClasificacion8, lblClasificacion7, lblClasificacion6, lblPaisClasificacion1, 
-			lblPaisClasificacion2, lblPaisClasificacion3, lblPaisClasificacion4, lblPaisClasificacion5;
+			lblCantantePaisesBajos3, lblPaisClasificacion6, lblPaisClasificacion7, lblPaisClasificacion8,
+			lblPaisClasificacion9, lblPaisClasificacion10, lblCantanteClasificacion1, lblCantanteClasificacion2,
+			lblCantanteClasificacion3, lblCantanteClasificacion4, lblCantanteClasificacion5,
+			lblCantanteClasificacion5_1, lblCantanteClasificacion5_2, lblClasificacion, lblCantanteClasificacion5_3,
+			lblCantanteClasificacion5_4, lblCantanteClasificacion5_5, lblClasificacion1, lblClasificacion2,
+			lblClasificacion3, lblClasificacion4, lblClasificacion5, lblClasificacion10, lblClasificacion9,
+			lblClasificacion8, lblClasificacion7, lblClasificacion6, lblPaisClasificacion1, lblPaisClasificacion2,
+			lblPaisClasificacion3, lblPaisClasificacion4, lblPaisClasificacion5;
 	public JProgressBar progressBar;
 
-	
 	/**
 	 * Launch the application.
 	 */
@@ -81,480 +81,26 @@ public class Vista extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		panelClasificacion = new JPanel();
-		panelClasificacion.setBounds(0, 0, 1107, 845);
-		contentPane.add(panelClasificacion);
-		panelClasificacion.setLayout(null);
-
-		lblClasificacion = new JLabel("Clasificación");
-		lblClasificacion.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion.setBounds(419, 43, 332, 63);
-		panelClasificacion.add(lblClasificacion);
-
-		lblClasificacion1 = new JLabel("1º");
-		lblClasificacion1.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion1.setBounds(109, 152, 63, 55);
-		panelClasificacion.add(lblClasificacion1);
-
-		lblClasificacion2 = new JLabel("2º");
-		lblClasificacion2.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion2.setBounds(109, 265, 63, 55);
-		panelClasificacion.add(lblClasificacion2);
-
-		lblClasificacion3 = new JLabel("3º");
-		lblClasificacion3.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion3.setBounds(109, 380, 63, 55);
-		panelClasificacion.add(lblClasificacion3);
-
-		lblClasificacion4 = new JLabel("4º");
-		lblClasificacion4.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion4.setBounds(109, 493, 63, 55);
-		panelClasificacion.add(lblClasificacion4);
-
-		lblClasificacion5 = new JLabel("5º");
-		lblClasificacion5.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion5.setBounds(109, 606, 63, 55);
-		panelClasificacion.add(lblClasificacion5);
-
-		lblClasificacion10 = new JLabel("10º");
-		lblClasificacion10.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion10.setBounds(611, 606, 63, 55);
-		panelClasificacion.add(lblClasificacion10);
-
-		lblClasificacion9 = new JLabel("9º");
-		lblClasificacion9.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion9.setBounds(611, 493, 63, 55);
-		panelClasificacion.add(lblClasificacion9);
-
-		lblClasificacion8 = new JLabel("8º");
-		lblClasificacion8.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion8.setBounds(611, 380, 63, 55);
-		panelClasificacion.add(lblClasificacion8);
-
-		lblClasificacion7 = new JLabel("7º");
-		lblClasificacion7.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion7.setBounds(611, 265, 63, 55);
-		panelClasificacion.add(lblClasificacion7);
-
-		lblClasificacion6 = new JLabel("6º");
-		lblClasificacion6.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion6.setBounds(611, 152, 63, 55);
-		panelClasificacion.add(lblClasificacion6);
-
-		lblPaisClasificacion1 = new JLabel("");
-		lblPaisClasificacion1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisClasificacion1.setBounds(182, 160, 193, 47);
-		panelClasificacion.add(lblPaisClasificacion1);
-
-		lblPaisClasificacion2 = new JLabel("");
-		lblPaisClasificacion2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisClasificacion2.setBounds(182, 273, 193, 47);
-		panelClasificacion.add(lblPaisClasificacion2);
-
-		lblPaisClasificacion3 = new JLabel("");
-		lblPaisClasificacion3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisClasificacion3.setBounds(182, 388, 193, 47);
-		panelClasificacion.add(lblPaisClasificacion3);
-
-		lblPaisClasificacion4 = new JLabel("");
-		lblPaisClasificacion4.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisClasificacion4.setBounds(182, 501, 193, 47);
-		panelClasificacion.add(lblPaisClasificacion4);
-
-		lblPaisClasificacion5 = new JLabel("");
-		lblPaisClasificacion5.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisClasificacion5.setBounds(182, 614, 193, 47);
-		panelClasificacion.add(lblPaisClasificacion5);
-
-		lblPaisClasificacion6 = new JLabel("");
-		lblPaisClasificacion6.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisClasificacion6.setBounds(684, 160, 193, 47);
-		panelClasificacion.add(lblPaisClasificacion6);
-
-		lblPaisClasificacion7 = new JLabel("");
-		lblPaisClasificacion7.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisClasificacion7.setBounds(684, 273, 193, 47);
-		panelClasificacion.add(lblPaisClasificacion7);
-
-		lblPaisClasificacion8 = new JLabel("");
-		lblPaisClasificacion8.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisClasificacion8.setBounds(684, 388, 193, 47);
-		panelClasificacion.add(lblPaisClasificacion8);
-
-		lblPaisClasificacion9 = new JLabel("");
-		lblPaisClasificacion9.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisClasificacion9.setBounds(684, 501, 193, 47);
-		panelClasificacion.add(lblPaisClasificacion9);
-
-		lblPaisClasificacion10 = new JLabel("");
-		lblPaisClasificacion10.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisClasificacion10.setBounds(684, 614, 193, 47);
-		panelClasificacion.add(lblPaisClasificacion10);
-
-		lblCantanteClasificacion1 = new JLabel("");
-		lblCantanteClasificacion1.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion1.setBounds(419, 145, 76, 62);
-		panelClasificacion.add(lblCantanteClasificacion1);
-
-		lblCantanteClasificacion2 = new JLabel("");
-		lblCantanteClasificacion2.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion2.setBounds(419, 258, 76, 62);
-		panelClasificacion.add(lblCantanteClasificacion2);
-
-		lblCantanteClasificacion3 = new JLabel("");
-		lblCantanteClasificacion3.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion3.setBounds(419, 373, 76, 62);
-		panelClasificacion.add(lblCantanteClasificacion3);
-
-		lblCantanteClasificacion4 = new JLabel("");
-		lblCantanteClasificacion4.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion4.setBounds(419, 486, 76, 62);
-		panelClasificacion.add(lblCantanteClasificacion4);
-
-		lblCantanteClasificacion5 = new JLabel("");
-		lblCantanteClasificacion5.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion5.setBounds(419, 599, 76, 62);
-		panelClasificacion.add(lblCantanteClasificacion5);
-
-		lblCantanteClasificacion5_1 = new JLabel("");
-		lblCantanteClasificacion5_1.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion5_1.setBounds(919, 145, 76, 62);
-		panelClasificacion.add(lblCantanteClasificacion5_1);
-
-		lblCantanteClasificacion5_2 = new JLabel("");
-		lblCantanteClasificacion5_2.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion5_2.setBounds(919, 258, 76, 62);
-		panelClasificacion.add(lblCantanteClasificacion5_2);
-
-		lblCantanteClasificacion5_3 = new JLabel("");
-		lblCantanteClasificacion5_3.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion5_3.setBounds(919, 373, 76, 62);
-		panelClasificacion.add(lblCantanteClasificacion5_3);
-
-		lblCantanteClasificacion5_4 = new JLabel("");
-		lblCantanteClasificacion5_4.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion5_4.setBounds(919, 486, 76, 62);
-		panelClasificacion.add(lblCantanteClasificacion5_4);
-
-		lblCantanteClasificacion5_5 = new JLabel("");
-		lblCantanteClasificacion5_5.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion5_5.setBounds(919, 599, 76, 62);
-		panelClasificacion.add(lblCantanteClasificacion5_5);
-
-		panelVotaciones2 = new JPanel();
-		panelVotaciones2.setLayout(null);
-		panelVotaciones2.setBounds(0, 0, 1107, 845);
-		contentPane.add(panelVotaciones2);
-
-		lblBanderaReinoUnido = new JLabel("");
-		lblBanderaReinoUnido.setBackground(new Color(128, 0, 128));
-		lblBanderaReinoUnido.setBounds(36, 73, 117, 62);
-		panelVotaciones2.add(lblBanderaReinoUnido);
-		lblBanderaReinoUnido.setIcon(new ImageIcon("src/Imagenes/reinoUnido.png"));
-
-		lblReinoUnido = new JLabel("Reino Unido");
-		lblReinoUnido.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblReinoUnido.setBounds(163, 105, 129, 30);
-		panelVotaciones2.add(lblReinoUnido);
-
-		lblTitulo2 = new JLabel("Clasificación por países");
-		lblTitulo2.setFont(new Font("Tahoma", Font.BOLD, 25));
-		lblTitulo2.setBounds(383, 10, 308, 53);
-		panelVotaciones2.add(lblTitulo2);
-
-		lblCantanteReinoUnido1 = new JLabel("");
-		lblCantanteReinoUnido1.setBackground(new Color(128, 0, 128));
-		lblCantanteReinoUnido1.setBounds(216, 152, 76, 62);
-		panelVotaciones2.add(lblCantanteReinoUnido1);
-
-		lblPuntuacionReinoUnido1 = new JLabel("1º");
-		lblPuntuacionReinoUnido1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionReinoUnido1.setBackground(new Color(128, 0, 128));
-		lblPuntuacionReinoUnido1.setBounds(36, 182, 30, 32);
-		panelVotaciones2.add(lblPuntuacionReinoUnido1);
-
-		lblPuntuacionReinoUnido2 = new JLabel("2º");
-		lblPuntuacionReinoUnido2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionReinoUnido2.setBackground(new Color(128, 0, 128));
-		lblPuntuacionReinoUnido2.setBounds(36, 265, 30, 32);
-		panelVotaciones2.add(lblPuntuacionReinoUnido2);
-
-		lblPaisReinoUnido1 = new JLabel("");
-		lblPaisReinoUnido1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisReinoUnido1.setBounds(76, 182, 130, 32);
-		panelVotaciones2.add(lblPaisReinoUnido1);
-
-		lblPaisReinoUnido2 = new JLabel("");
-		lblPaisReinoUnido2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisReinoUnido2.setBounds(76, 265, 130, 32);
-		panelVotaciones2.add(lblPaisReinoUnido2);
-
-		lblCantanteReinoUnido2 = new JLabel("");
-		lblCantanteReinoUnido2.setBackground(new Color(128, 0, 128));
-		lblCantanteReinoUnido2.setBounds(216, 235, 76, 62);
-		panelVotaciones2.add(lblCantanteReinoUnido2);
-
-		lblPuntuacionReinoUnido3 = new JLabel("3º");
-		lblPuntuacionReinoUnido3.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionReinoUnido3.setBackground(new Color(128, 0, 128));
-		lblPuntuacionReinoUnido3.setBounds(36, 344, 30, 32);
-		panelVotaciones2.add(lblPuntuacionReinoUnido3);
-
-		lblPaisReinoUnido3 = new JLabel("");
-		lblPaisReinoUnido3.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisReinoUnido3.setBounds(76, 344, 130, 32);
-		panelVotaciones2.add(lblPaisReinoUnido3);
-
-		lblCantanteReinoUnido3 = new JLabel("");
-		lblCantanteReinoUnido3.setBackground(new Color(128, 0, 128));
-		lblCantanteReinoUnido3.setBounds(216, 317, 76, 62);
-		panelVotaciones2.add(lblCantanteReinoUnido3);
-
-		lblPuntuacionRumania3 = new JLabel("3º");
-		lblPuntuacionRumania3.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionRumania3.setBackground(new Color(128, 0, 128));
-		lblPuntuacionRumania3.setBounds(36, 672, 30, 32);
-		panelVotaciones2.add(lblPuntuacionRumania3);
-
-		lblPaisRumania3 = new JLabel("");
-		lblPaisRumania3.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisRumania3.setBounds(76, 672, 130, 32);
-		panelVotaciones2.add(lblPaisRumania3);
-
-		lblCantanteRumania3 = new JLabel("");
-		lblCantanteRumania3.setBackground(new Color(128, 0, 128));
-		lblCantanteRumania3.setBounds(216, 645, 76, 62);
-		panelVotaciones2.add(lblCantanteRumania3);
-
-		lblCantanteRumania2 = new JLabel("");
-		lblCantanteRumania2.setBackground(new Color(128, 0, 128));
-		lblCantanteRumania2.setBounds(216, 563, 76, 62);
-		panelVotaciones2.add(lblCantanteRumania2);
-
-		lblPaisRumania2 = new JLabel("");
-		lblPaisRumania2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisRumania2.setBounds(76, 593, 130, 32);
-		panelVotaciones2.add(lblPaisRumania2);
-
-		lblPuntuacionRumania2 = new JLabel("2º");
-		lblPuntuacionRumania2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionRumania2.setBackground(new Color(128, 0, 128));
-		lblPuntuacionRumania2.setBounds(36, 593, 30, 32);
-		panelVotaciones2.add(lblPuntuacionRumania2);
-
-		lblPuntuacionRumania1 = new JLabel("1º");
-		lblPuntuacionRumania1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionRumania1.setBackground(new Color(128, 0, 128));
-		lblPuntuacionRumania1.setBounds(36, 510, 30, 32);
-		panelVotaciones2.add(lblPuntuacionRumania1);
-
-		lblPaisRumania1 = new JLabel("");
-		lblPaisRumania1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisRumania1.setBounds(76, 510, 130, 32);
-		panelVotaciones2.add(lblPaisRumania1);
-
-		lblCantanteRumania1 = new JLabel("");
-		lblCantanteRumania1.setBackground(new Color(128, 0, 128));
-		lblCantanteRumania1.setBounds(216, 480, 76, 62);
-		panelVotaciones2.add(lblCantanteRumania1);
-
-		lblRumania = new JLabel("Rumania");
-		lblRumania.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblRumania.setBounds(163, 433, 123, 30);
-		panelVotaciones2.add(lblRumania);
-
-		lblBanderaRumania = new JLabel("");
-		lblBanderaRumania.setBackground(new Color(128, 0, 128));
-		lblBanderaRumania.setBounds(36, 401, 117, 62);
-		panelVotaciones2.add(lblBanderaRumania);
-		lblBanderaRumania.setIcon(new ImageIcon("src/Imagenes/rumania.png"));
-
-		lblBanderaPolonia = new JLabel("");
-		lblBanderaPolonia.setBackground(new Color(128, 0, 128));
-		lblBanderaPolonia.setBounds(402, 73, 117, 62);
-		panelVotaciones2.add(lblBanderaPolonia);
-		lblBanderaPolonia.setIcon(new ImageIcon("src/Imagenes/polonia.png"));
-
-		lblPolonia = new JLabel("Polonia");
-		lblPolonia.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPolonia.setBounds(529, 105, 129, 30);
-		panelVotaciones2.add(lblPolonia);
-
-		lblPuntuacionPolonia1 = new JLabel("1º");
-		lblPuntuacionPolonia1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionPolonia1.setBackground(new Color(128, 0, 128));
-		lblPuntuacionPolonia1.setBounds(402, 182, 30, 32);
-		panelVotaciones2.add(lblPuntuacionPolonia1);
-
-		lblPaisPolonia1 = new JLabel("");
-		lblPaisPolonia1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisPolonia1.setBounds(442, 182, 130, 32);
-		panelVotaciones2.add(lblPaisPolonia1);
-
-		lblCantantePolonia1 = new JLabel("");
-		lblCantantePolonia1.setBackground(new Color(128, 0, 128));
-		lblCantantePolonia1.setBounds(582, 152, 76, 62);
-		panelVotaciones2.add(lblCantantePolonia1);
-
-		lblPuntuacionPolonia2 = new JLabel("2º");
-		lblPuntuacionPolonia2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionPolonia2.setBackground(new Color(128, 0, 128));
-		lblPuntuacionPolonia2.setBounds(402, 265, 30, 32);
-		panelVotaciones2.add(lblPuntuacionPolonia2);
-
-		lblPaisPolonia2 = new JLabel("");
-		lblPaisPolonia2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisPolonia2.setBounds(442, 265, 130, 32);
-		panelVotaciones2.add(lblPaisPolonia2);
-
-		lblCantantePolonia2 = new JLabel("");
-		lblCantantePolonia2.setBackground(new Color(128, 0, 128));
-		lblCantantePolonia2.setBounds(582, 235, 76, 62);
-		panelVotaciones2.add(lblCantantePolonia2);
-
-		lblPuntuacionPolonia3 = new JLabel("3º");
-		lblPuntuacionPolonia3.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionPolonia3.setBackground(new Color(128, 0, 128));
-		lblPuntuacionPolonia3.setBounds(402, 344, 30, 32);
-		panelVotaciones2.add(lblPuntuacionPolonia3);
-
-		lblPaisPolonia3 = new JLabel("");
-		lblPaisPolonia3.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisPolonia3.setBounds(442, 344, 130, 32);
-		panelVotaciones2.add(lblPaisPolonia3);
-
-		lblCantantePolonia3 = new JLabel("");
-		lblCantantePolonia3.setBackground(new Color(128, 0, 128));
-		lblCantantePolonia3.setBounds(582, 314, 76, 62);
-		panelVotaciones2.add(lblCantantePolonia3);
-
-		lblPuntuacionGrecia2 = new JLabel("2º");
-		lblPuntuacionGrecia2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionGrecia2.setBackground(new Color(128, 0, 128));
-		lblPuntuacionGrecia2.setBounds(402, 593, 30, 32);
-		panelVotaciones2.add(lblPuntuacionGrecia2);
-
-		lblBanderaGrecia = new JLabel("");
-		lblBanderaGrecia.setBackground(new Color(128, 0, 128));
-		lblBanderaGrecia.setBounds(402, 401, 117, 62);
-		panelVotaciones2.add(lblBanderaGrecia);
-		lblBanderaGrecia.setIcon(new ImageIcon("src/Imagenes/grecia.png"));
-
-		lblGrecia = new JLabel("Grecia");
-		lblGrecia.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblGrecia.setBounds(529, 433, 129, 30);
-		panelVotaciones2.add(lblGrecia);
-
-		lblPuntuacionGrecia1 = new JLabel("1º");
-		lblPuntuacionGrecia1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionGrecia1.setBackground(new Color(128, 0, 128));
-		lblPuntuacionGrecia1.setBounds(402, 510, 30, 32);
-		panelVotaciones2.add(lblPuntuacionGrecia1);
-
-		lblPaisGrecia1 = new JLabel("");
-		lblPaisGrecia1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisGrecia1.setBounds(442, 510, 130, 32);
-		panelVotaciones2.add(lblPaisGrecia1);
-
-		lblCantanteGrecia1 = new JLabel("");
-		lblCantanteGrecia1.setBackground(new Color(128, 0, 128));
-		lblCantanteGrecia1.setBounds(582, 480, 76, 62);
-		panelVotaciones2.add(lblCantanteGrecia1);
-
-		lblPaisGrecia2 = new JLabel("");
-		lblPaisGrecia2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisGrecia2.setBounds(442, 593, 130, 32);
-		panelVotaciones2.add(lblPaisGrecia2);
-
-		lblCantanteGrecia2 = new JLabel("");
-		lblCantanteGrecia2.setBackground(new Color(128, 0, 128));
-		lblCantanteGrecia2.setBounds(582, 563, 76, 62);
-		panelVotaciones2.add(lblCantanteGrecia2);
-
-		lblPaisGrecia3 = new JLabel("");
-		lblPaisGrecia3.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisGrecia3.setBounds(442, 672, 130, 32);
-		panelVotaciones2.add(lblPaisGrecia3);
-
-		lblPuntuacionGrecia3 = new JLabel("3º");
-		lblPuntuacionGrecia3.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionGrecia3.setBackground(new Color(128, 0, 128));
-		lblPuntuacionGrecia3.setBounds(402, 672, 30, 32);
-		panelVotaciones2.add(lblPuntuacionGrecia3);
-
-		lblCantanteGrecia3 = new JLabel("");
-		lblCantanteGrecia3.setBackground(new Color(128, 0, 128));
-		lblCantanteGrecia3.setBounds(582, 642, 76, 62);
-		panelVotaciones2.add(lblCantanteGrecia3);
-
-		lblBanderaPaisesBajos = new JLabel("");
-		lblBanderaPaisesBajos.setBackground(new Color(128, 0, 128));
-		lblBanderaPaisesBajos.setBounds(758, 73, 117, 62);
-		panelVotaciones2.add(lblBanderaPaisesBajos);
-		lblBanderaPaisesBajos.setIcon(new ImageIcon("src/Imagenes/holanda.png"));
-
-		lblPasesBajos = new JLabel("Países Bajos");
-		lblPasesBajos.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPasesBajos.setBounds(885, 105, 129, 30);
-		panelVotaciones2.add(lblPasesBajos);
-
-		lblPuntuacionPaisesBajos1 = new JLabel("1º");
-		lblPuntuacionPaisesBajos1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionPaisesBajos1.setBackground(new Color(128, 0, 128));
-		lblPuntuacionPaisesBajos1.setBounds(758, 182, 30, 32);
-		panelVotaciones2.add(lblPuntuacionPaisesBajos1);
-
-		lblPaisPaisesBajos1 = new JLabel("");
-		lblPaisPaisesBajos1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisPaisesBajos1.setBounds(798, 182, 130, 32);
-		panelVotaciones2.add(lblPaisPaisesBajos1);
-
-		lblCantantePaisesBajos1 = new JLabel("");
-		lblCantantePaisesBajos1.setBackground(new Color(128, 0, 128));
-		lblCantantePaisesBajos1.setBounds(938, 152, 76, 62);
-		panelVotaciones2.add(lblCantantePaisesBajos1);
-
-		lblPaisPaisesBajos2 = new JLabel("");
-		lblPaisPaisesBajos2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisPaisesBajos2.setBounds(798, 265, 130, 32);
-		panelVotaciones2.add(lblPaisPaisesBajos2);
-
-		lblCantantePaisesBajos2 = new JLabel("");
-		lblCantantePaisesBajos2.setBackground(new Color(128, 0, 128));
-		lblCantantePaisesBajos2.setBounds(938, 235, 76, 62);
-		panelVotaciones2.add(lblCantantePaisesBajos2);
-
-		lblPuntuacionPaisesBajos2 = new JLabel("2º");
-		lblPuntuacionPaisesBajos2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionPaisesBajos2.setBackground(new Color(128, 0, 128));
-		lblPuntuacionPaisesBajos2.setBounds(758, 265, 30, 32);
-		panelVotaciones2.add(lblPuntuacionPaisesBajos2);
-
-		lblPuntuacionPaisesBajos3 = new JLabel("3º");
-		lblPuntuacionPaisesBajos3.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblPuntuacionPaisesBajos3.setBackground(new Color(128, 0, 128));
-		lblPuntuacionPaisesBajos3.setBounds(758, 344, 30, 32);
-		panelVotaciones2.add(lblPuntuacionPaisesBajos3);
-
-		lblPaisPaisesBajos3 = new JLabel("");
-		lblPaisPaisesBajos3.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPaisPaisesBajos3.setBounds(798, 344, 130, 32);
-		panelVotaciones2.add(lblPaisPaisesBajos3);
-
-		lblCantantePaisesBajos3 = new JLabel("");
-		lblCantantePaisesBajos3.setBackground(new Color(128, 0, 128));
-		lblCantantePaisesBajos3.setBounds(938, 314, 76, 62);
-		panelVotaciones2.add(lblCantantePaisesBajos3);
-
-		btnAtras = new JButton("Atrás");
-		btnAtras.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnAtras.setBounds(837, 672, 206, 53);
-		panelVotaciones2.add(btnAtras);
-
-		btnVerClasficacin = new JButton("Ver Clasficación");
-		btnVerClasficacin.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnVerClasficacin.setBounds(837, 603, 206, 53);
-		panelVotaciones2.add(btnVerClasficacin);
+		panelInicial = new JPanel();
+		panelInicial.setBounds(0, 0, 1107, 845);
+		contentPane.add(panelInicial);
+		panelInicial.setLayout(null);
+
+		progressBar = new JProgressBar();
+		progressBar.setBackground(Color.BLACK);
+		progressBar.setStringPainted(true);
+		progressBar.setBounds(301, 623, 325, 31);
+		panelInicial.add(progressBar);
+
+		btnSimularVotaciones = new JButton("SIMULAR VOTACIONES");
+		btnSimularVotaciones.setBounds(301, 547, 325, 56);
+		btnSimularVotaciones.setFont(new Font("Tahoma", Font.BOLD, 22));
+		panelInicial.add(btnSimularVotaciones);
+
+		lblFondo = new JLabel("");
+		lblFondo.setBounds(0, 0, 943, 682);
+		lblFondo.setIcon(new ImageIcon("src/Imagenes/fondo.jpg"));
+		panelInicial.add(lblFondo);
 
 		panelVotaciones = new JPanel();
 		panelVotaciones.setBounds(0, 0, 1107, 845);
@@ -873,25 +419,479 @@ public class Vista extends JFrame {
 		lblBanderaFrancia.setIcon(new ImageIcon("src/Imagenes/espania.png"));
 		lblBanderaFrancia.setIcon(new ImageIcon("src/Imagenes/alemania.png"));
 
-		panelInicial = new JPanel();
-		panelInicial.setBounds(0, 0, 1107, 845);
-		contentPane.add(panelInicial);
-		panelInicial.setLayout(null);
+		panelVotaciones2 = new JPanel();
+		panelVotaciones2.setLayout(null);
+		panelVotaciones2.setBounds(0, 0, 1107, 845);
+		contentPane.add(panelVotaciones2);
 
-		progressBar = new JProgressBar();
-		progressBar.setBackground(Color.BLACK);
-		progressBar.setStringPainted(true);
-		progressBar.setBounds(301, 623, 325, 31);
-		panelInicial.add(progressBar);
+		lblBanderaReinoUnido = new JLabel("");
+		lblBanderaReinoUnido.setBackground(new Color(128, 0, 128));
+		lblBanderaReinoUnido.setBounds(36, 73, 117, 62);
+		panelVotaciones2.add(lblBanderaReinoUnido);
+		lblBanderaReinoUnido.setIcon(new ImageIcon("src/Imagenes/reinoUnido.png"));
 
-		btnSimularVotaciones = new JButton("SIMULAR VOTACIONES");
-		btnSimularVotaciones.setBounds(301, 547, 325, 56);
-		btnSimularVotaciones.setFont(new Font("Tahoma", Font.BOLD, 22));
-		panelInicial.add(btnSimularVotaciones);
+		lblReinoUnido = new JLabel("Reino Unido");
+		lblReinoUnido.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblReinoUnido.setBounds(163, 105, 129, 30);
+		panelVotaciones2.add(lblReinoUnido);
 
-		lblFondo = new JLabel("");
-		lblFondo.setBounds(0, 0, 943, 682);
-		lblFondo.setIcon(new ImageIcon("src/Imagenes/fondo.jpg"));
-		panelInicial.add(lblFondo);
+		lblTitulo2 = new JLabel("Clasificación por países");
+		lblTitulo2.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblTitulo2.setBounds(383, 10, 308, 53);
+		panelVotaciones2.add(lblTitulo2);
+
+		lblCantanteReinoUnido1 = new JLabel("");
+		lblCantanteReinoUnido1.setBackground(new Color(128, 0, 128));
+		lblCantanteReinoUnido1.setBounds(216, 152, 76, 62);
+		panelVotaciones2.add(lblCantanteReinoUnido1);
+
+		lblPuntuacionReinoUnido1 = new JLabel("1º");
+		lblPuntuacionReinoUnido1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionReinoUnido1.setBackground(new Color(128, 0, 128));
+		lblPuntuacionReinoUnido1.setBounds(36, 182, 30, 32);
+		panelVotaciones2.add(lblPuntuacionReinoUnido1);
+
+		lblPuntuacionReinoUnido2 = new JLabel("2º");
+		lblPuntuacionReinoUnido2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionReinoUnido2.setBackground(new Color(128, 0, 128));
+		lblPuntuacionReinoUnido2.setBounds(36, 265, 30, 32);
+		panelVotaciones2.add(lblPuntuacionReinoUnido2);
+
+		lblPaisReinoUnido1 = new JLabel("");
+		lblPaisReinoUnido1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisReinoUnido1.setBounds(76, 182, 130, 32);
+		panelVotaciones2.add(lblPaisReinoUnido1);
+
+		lblPaisReinoUnido2 = new JLabel("");
+		lblPaisReinoUnido2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisReinoUnido2.setBounds(76, 265, 130, 32);
+		panelVotaciones2.add(lblPaisReinoUnido2);
+
+		lblCantanteReinoUnido2 = new JLabel("");
+		lblCantanteReinoUnido2.setBackground(new Color(128, 0, 128));
+		lblCantanteReinoUnido2.setBounds(216, 235, 76, 62);
+		panelVotaciones2.add(lblCantanteReinoUnido2);
+
+		lblPuntuacionReinoUnido3 = new JLabel("3º");
+		lblPuntuacionReinoUnido3.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionReinoUnido3.setBackground(new Color(128, 0, 128));
+		lblPuntuacionReinoUnido3.setBounds(36, 344, 30, 32);
+		panelVotaciones2.add(lblPuntuacionReinoUnido3);
+
+		lblPaisReinoUnido3 = new JLabel("");
+		lblPaisReinoUnido3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisReinoUnido3.setBounds(76, 344, 130, 32);
+		panelVotaciones2.add(lblPaisReinoUnido3);
+
+		lblCantanteReinoUnido3 = new JLabel("");
+		lblCantanteReinoUnido3.setBackground(new Color(128, 0, 128));
+		lblCantanteReinoUnido3.setBounds(216, 317, 76, 62);
+		panelVotaciones2.add(lblCantanteReinoUnido3);
+
+		lblPuntuacionRumania3 = new JLabel("3º");
+		lblPuntuacionRumania3.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionRumania3.setBackground(new Color(128, 0, 128));
+		lblPuntuacionRumania3.setBounds(36, 672, 30, 32);
+		panelVotaciones2.add(lblPuntuacionRumania3);
+
+		lblPaisRumania3 = new JLabel("");
+		lblPaisRumania3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisRumania3.setBounds(76, 672, 130, 32);
+		panelVotaciones2.add(lblPaisRumania3);
+
+		lblCantanteRumania3 = new JLabel("");
+		lblCantanteRumania3.setBackground(new Color(128, 0, 128));
+		lblCantanteRumania3.setBounds(216, 645, 76, 62);
+		panelVotaciones2.add(lblCantanteRumania3);
+
+		lblCantanteRumania2 = new JLabel("");
+		lblCantanteRumania2.setBackground(new Color(128, 0, 128));
+		lblCantanteRumania2.setBounds(216, 563, 76, 62);
+		panelVotaciones2.add(lblCantanteRumania2);
+
+		lblPaisRumania2 = new JLabel("");
+		lblPaisRumania2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisRumania2.setBounds(76, 593, 130, 32);
+		panelVotaciones2.add(lblPaisRumania2);
+
+		lblPuntuacionRumania2 = new JLabel("2º");
+		lblPuntuacionRumania2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionRumania2.setBackground(new Color(128, 0, 128));
+		lblPuntuacionRumania2.setBounds(36, 593, 30, 32);
+		panelVotaciones2.add(lblPuntuacionRumania2);
+
+		lblPuntuacionRumania1 = new JLabel("1º");
+		lblPuntuacionRumania1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionRumania1.setBackground(new Color(128, 0, 128));
+		lblPuntuacionRumania1.setBounds(36, 510, 30, 32);
+		panelVotaciones2.add(lblPuntuacionRumania1);
+
+		lblPaisRumania1 = new JLabel("");
+		lblPaisRumania1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisRumania1.setBounds(76, 510, 130, 32);
+		panelVotaciones2.add(lblPaisRumania1);
+
+		lblCantanteRumania1 = new JLabel("");
+		lblCantanteRumania1.setBackground(new Color(128, 0, 128));
+		lblCantanteRumania1.setBounds(216, 480, 76, 62);
+		panelVotaciones2.add(lblCantanteRumania1);
+
+		lblRumania = new JLabel("Rumania");
+		lblRumania.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblRumania.setBounds(163, 433, 123, 30);
+		panelVotaciones2.add(lblRumania);
+
+		lblBanderaRumania = new JLabel("");
+		lblBanderaRumania.setBackground(new Color(128, 0, 128));
+		lblBanderaRumania.setBounds(36, 401, 117, 62);
+		panelVotaciones2.add(lblBanderaRumania);
+		lblBanderaRumania.setIcon(new ImageIcon("src/Imagenes/rumania.png"));
+
+		lblBanderaPolonia = new JLabel("");
+		lblBanderaPolonia.setBackground(new Color(128, 0, 128));
+		lblBanderaPolonia.setBounds(402, 73, 117, 62);
+		panelVotaciones2.add(lblBanderaPolonia);
+		lblBanderaPolonia.setIcon(new ImageIcon("src/Imagenes/polonia.png"));
+
+		lblPolonia = new JLabel("Polonia");
+		lblPolonia.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblPolonia.setBounds(529, 105, 129, 30);
+		panelVotaciones2.add(lblPolonia);
+
+		lblPuntuacionPolonia1 = new JLabel("1º");
+		lblPuntuacionPolonia1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionPolonia1.setBackground(new Color(128, 0, 128));
+		lblPuntuacionPolonia1.setBounds(402, 182, 30, 32);
+		panelVotaciones2.add(lblPuntuacionPolonia1);
+
+		lblPaisPolonia1 = new JLabel("");
+		lblPaisPolonia1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisPolonia1.setBounds(442, 182, 130, 32);
+		panelVotaciones2.add(lblPaisPolonia1);
+
+		lblCantantePolonia1 = new JLabel("");
+		lblCantantePolonia1.setBackground(new Color(128, 0, 128));
+		lblCantantePolonia1.setBounds(582, 152, 76, 62);
+		panelVotaciones2.add(lblCantantePolonia1);
+
+		lblPuntuacionPolonia2 = new JLabel("2º");
+		lblPuntuacionPolonia2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionPolonia2.setBackground(new Color(128, 0, 128));
+		lblPuntuacionPolonia2.setBounds(402, 265, 30, 32);
+		panelVotaciones2.add(lblPuntuacionPolonia2);
+
+		lblPaisPolonia2 = new JLabel("");
+		lblPaisPolonia2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisPolonia2.setBounds(442, 265, 130, 32);
+		panelVotaciones2.add(lblPaisPolonia2);
+
+		lblCantantePolonia2 = new JLabel("");
+		lblCantantePolonia2.setBackground(new Color(128, 0, 128));
+		lblCantantePolonia2.setBounds(582, 235, 76, 62);
+		panelVotaciones2.add(lblCantantePolonia2);
+
+		lblPuntuacionPolonia3 = new JLabel("3º");
+		lblPuntuacionPolonia3.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionPolonia3.setBackground(new Color(128, 0, 128));
+		lblPuntuacionPolonia3.setBounds(402, 344, 30, 32);
+		panelVotaciones2.add(lblPuntuacionPolonia3);
+
+		lblPaisPolonia3 = new JLabel("");
+		lblPaisPolonia3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisPolonia3.setBounds(442, 344, 130, 32);
+		panelVotaciones2.add(lblPaisPolonia3);
+
+		lblCantantePolonia3 = new JLabel("");
+		lblCantantePolonia3.setBackground(new Color(128, 0, 128));
+		lblCantantePolonia3.setBounds(582, 314, 76, 62);
+		panelVotaciones2.add(lblCantantePolonia3);
+
+		lblPuntuacionGrecia2 = new JLabel("2º");
+		lblPuntuacionGrecia2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionGrecia2.setBackground(new Color(128, 0, 128));
+		lblPuntuacionGrecia2.setBounds(402, 593, 30, 32);
+		panelVotaciones2.add(lblPuntuacionGrecia2);
+
+		lblBanderaGrecia = new JLabel("");
+		lblBanderaGrecia.setBackground(new Color(128, 0, 128));
+		lblBanderaGrecia.setBounds(402, 401, 117, 62);
+		panelVotaciones2.add(lblBanderaGrecia);
+		lblBanderaGrecia.setIcon(new ImageIcon("src/Imagenes/grecia.png"));
+
+		lblGrecia = new JLabel("Grecia");
+		lblGrecia.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblGrecia.setBounds(529, 433, 129, 30);
+		panelVotaciones2.add(lblGrecia);
+
+		lblPuntuacionGrecia1 = new JLabel("1º");
+		lblPuntuacionGrecia1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionGrecia1.setBackground(new Color(128, 0, 128));
+		lblPuntuacionGrecia1.setBounds(402, 510, 30, 32);
+		panelVotaciones2.add(lblPuntuacionGrecia1);
+
+		lblPaisGrecia1 = new JLabel("");
+		lblPaisGrecia1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisGrecia1.setBounds(442, 510, 130, 32);
+		panelVotaciones2.add(lblPaisGrecia1);
+
+		lblCantanteGrecia1 = new JLabel("");
+		lblCantanteGrecia1.setBackground(new Color(128, 0, 128));
+		lblCantanteGrecia1.setBounds(582, 480, 76, 62);
+		panelVotaciones2.add(lblCantanteGrecia1);
+
+		lblPaisGrecia2 = new JLabel("");
+		lblPaisGrecia2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisGrecia2.setBounds(442, 593, 130, 32);
+		panelVotaciones2.add(lblPaisGrecia2);
+
+		lblCantanteGrecia2 = new JLabel("");
+		lblCantanteGrecia2.setBackground(new Color(128, 0, 128));
+		lblCantanteGrecia2.setBounds(582, 563, 76, 62);
+		panelVotaciones2.add(lblCantanteGrecia2);
+
+		lblPaisGrecia3 = new JLabel("");
+		lblPaisGrecia3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisGrecia3.setBounds(442, 672, 130, 32);
+		panelVotaciones2.add(lblPaisGrecia3);
+
+		lblPuntuacionGrecia3 = new JLabel("3º");
+		lblPuntuacionGrecia3.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionGrecia3.setBackground(new Color(128, 0, 128));
+		lblPuntuacionGrecia3.setBounds(402, 672, 30, 32);
+		panelVotaciones2.add(lblPuntuacionGrecia3);
+
+		lblCantanteGrecia3 = new JLabel("");
+		lblCantanteGrecia3.setBackground(new Color(128, 0, 128));
+		lblCantanteGrecia3.setBounds(582, 642, 76, 62);
+		panelVotaciones2.add(lblCantanteGrecia3);
+
+		lblBanderaPaisesBajos = new JLabel("");
+		lblBanderaPaisesBajos.setBackground(new Color(128, 0, 128));
+		lblBanderaPaisesBajos.setBounds(758, 73, 117, 62);
+		panelVotaciones2.add(lblBanderaPaisesBajos);
+		lblBanderaPaisesBajos.setIcon(new ImageIcon("src/Imagenes/holanda.png"));
+
+		lblPasesBajos = new JLabel("Países Bajos");
+		lblPasesBajos.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblPasesBajos.setBounds(885, 105, 129, 30);
+		panelVotaciones2.add(lblPasesBajos);
+
+		lblPuntuacionPaisesBajos1 = new JLabel("1º");
+		lblPuntuacionPaisesBajos1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionPaisesBajos1.setBackground(new Color(128, 0, 128));
+		lblPuntuacionPaisesBajos1.setBounds(758, 182, 30, 32);
+		panelVotaciones2.add(lblPuntuacionPaisesBajos1);
+
+		lblPaisPaisesBajos1 = new JLabel("");
+		lblPaisPaisesBajos1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisPaisesBajos1.setBounds(798, 182, 130, 32);
+		panelVotaciones2.add(lblPaisPaisesBajos1);
+
+		lblCantantePaisesBajos1 = new JLabel("");
+		lblCantantePaisesBajos1.setBackground(new Color(128, 0, 128));
+		lblCantantePaisesBajos1.setBounds(938, 152, 76, 62);
+		panelVotaciones2.add(lblCantantePaisesBajos1);
+
+		lblPaisPaisesBajos2 = new JLabel("");
+		lblPaisPaisesBajos2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisPaisesBajos2.setBounds(798, 265, 130, 32);
+		panelVotaciones2.add(lblPaisPaisesBajos2);
+
+		lblCantantePaisesBajos2 = new JLabel("");
+		lblCantantePaisesBajos2.setBackground(new Color(128, 0, 128));
+		lblCantantePaisesBajos2.setBounds(938, 235, 76, 62);
+		panelVotaciones2.add(lblCantantePaisesBajos2);
+
+		lblPuntuacionPaisesBajos2 = new JLabel("2º");
+		lblPuntuacionPaisesBajos2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionPaisesBajos2.setBackground(new Color(128, 0, 128));
+		lblPuntuacionPaisesBajos2.setBounds(758, 265, 30, 32);
+		panelVotaciones2.add(lblPuntuacionPaisesBajos2);
+
+		lblPuntuacionPaisesBajos3 = new JLabel("3º");
+		lblPuntuacionPaisesBajos3.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblPuntuacionPaisesBajos3.setBackground(new Color(128, 0, 128));
+		lblPuntuacionPaisesBajos3.setBounds(758, 344, 30, 32);
+		panelVotaciones2.add(lblPuntuacionPaisesBajos3);
+
+		lblPaisPaisesBajos3 = new JLabel("");
+		lblPaisPaisesBajos3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPaisPaisesBajos3.setBounds(798, 344, 130, 32);
+		panelVotaciones2.add(lblPaisPaisesBajos3);
+
+		lblCantantePaisesBajos3 = new JLabel("");
+		lblCantantePaisesBajos3.setBackground(new Color(128, 0, 128));
+		lblCantantePaisesBajos3.setBounds(938, 314, 76, 62);
+		panelVotaciones2.add(lblCantantePaisesBajos3);
+
+		btnAtras = new JButton("Atrás");
+		btnAtras.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnAtras.setBounds(837, 672, 206, 53);
+		panelVotaciones2.add(btnAtras);
+
+		btnVerClasficacin = new JButton("Ver Clasficación");
+		btnVerClasficacin.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnVerClasficacin.setBounds(837, 603, 206, 53);
+		panelVotaciones2.add(btnVerClasficacin);
+
+		panelClasificacion = new JPanel();
+		panelClasificacion.setBounds(0, 0, 1107, 845);
+		contentPane.add(panelClasificacion);
+		panelClasificacion.setLayout(null);
+
+		lblClasificacion = new JLabel("Clasificación");
+		lblClasificacion.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblClasificacion.setBounds(419, 43, 332, 63);
+		panelClasificacion.add(lblClasificacion);
+
+		lblClasificacion1 = new JLabel("1º");
+		lblClasificacion1.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblClasificacion1.setBounds(109, 152, 63, 55);
+		panelClasificacion.add(lblClasificacion1);
+
+		lblClasificacion2 = new JLabel("2º");
+		lblClasificacion2.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblClasificacion2.setBounds(109, 265, 63, 55);
+		panelClasificacion.add(lblClasificacion2);
+
+		lblClasificacion3 = new JLabel("3º");
+		lblClasificacion3.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblClasificacion3.setBounds(109, 380, 63, 55);
+		panelClasificacion.add(lblClasificacion3);
+
+		lblClasificacion4 = new JLabel("4º");
+		lblClasificacion4.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblClasificacion4.setBounds(109, 493, 63, 55);
+		panelClasificacion.add(lblClasificacion4);
+
+		lblClasificacion5 = new JLabel("5º");
+		lblClasificacion5.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblClasificacion5.setBounds(109, 606, 63, 55);
+		panelClasificacion.add(lblClasificacion5);
+
+		lblClasificacion10 = new JLabel("10º");
+		lblClasificacion10.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblClasificacion10.setBounds(611, 606, 63, 55);
+		panelClasificacion.add(lblClasificacion10);
+
+		lblClasificacion9 = new JLabel("9º");
+		lblClasificacion9.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblClasificacion9.setBounds(611, 493, 63, 55);
+		panelClasificacion.add(lblClasificacion9);
+
+		lblClasificacion8 = new JLabel("8º");
+		lblClasificacion8.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblClasificacion8.setBounds(611, 380, 63, 55);
+		panelClasificacion.add(lblClasificacion8);
+
+		lblClasificacion7 = new JLabel("7º");
+		lblClasificacion7.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblClasificacion7.setBounds(611, 265, 63, 55);
+		panelClasificacion.add(lblClasificacion7);
+
+		lblClasificacion6 = new JLabel("6º");
+		lblClasificacion6.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblClasificacion6.setBounds(611, 152, 63, 55);
+		panelClasificacion.add(lblClasificacion6);
+
+		lblPaisClasificacion1 = new JLabel("");
+		lblPaisClasificacion1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblPaisClasificacion1.setBounds(182, 160, 193, 47);
+		panelClasificacion.add(lblPaisClasificacion1);
+
+		lblPaisClasificacion2 = new JLabel("");
+		lblPaisClasificacion2.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblPaisClasificacion2.setBounds(182, 273, 193, 47);
+		panelClasificacion.add(lblPaisClasificacion2);
+
+		lblPaisClasificacion3 = new JLabel("");
+		lblPaisClasificacion3.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblPaisClasificacion3.setBounds(182, 388, 193, 47);
+		panelClasificacion.add(lblPaisClasificacion3);
+
+		lblPaisClasificacion4 = new JLabel("");
+		lblPaisClasificacion4.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblPaisClasificacion4.setBounds(182, 501, 193, 47);
+		panelClasificacion.add(lblPaisClasificacion4);
+
+		lblPaisClasificacion5 = new JLabel("");
+		lblPaisClasificacion5.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblPaisClasificacion5.setBounds(182, 614, 193, 47);
+		panelClasificacion.add(lblPaisClasificacion5);
+
+		lblPaisClasificacion6 = new JLabel("");
+		lblPaisClasificacion6.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblPaisClasificacion6.setBounds(684, 160, 193, 47);
+		panelClasificacion.add(lblPaisClasificacion6);
+
+		lblPaisClasificacion7 = new JLabel("");
+		lblPaisClasificacion7.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblPaisClasificacion7.setBounds(684, 273, 193, 47);
+		panelClasificacion.add(lblPaisClasificacion7);
+
+		lblPaisClasificacion8 = new JLabel("");
+		lblPaisClasificacion8.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblPaisClasificacion8.setBounds(684, 388, 193, 47);
+		panelClasificacion.add(lblPaisClasificacion8);
+
+		lblPaisClasificacion9 = new JLabel("");
+		lblPaisClasificacion9.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblPaisClasificacion9.setBounds(684, 501, 193, 47);
+		panelClasificacion.add(lblPaisClasificacion9);
+
+		lblPaisClasificacion10 = new JLabel("");
+		lblPaisClasificacion10.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblPaisClasificacion10.setBounds(684, 614, 193, 47);
+		panelClasificacion.add(lblPaisClasificacion10);
+
+		lblCantanteClasificacion1 = new JLabel("");
+		lblCantanteClasificacion1.setBackground(new Color(128, 0, 128));
+		lblCantanteClasificacion1.setBounds(419, 145, 76, 62);
+		panelClasificacion.add(lblCantanteClasificacion1);
+
+		lblCantanteClasificacion2 = new JLabel("");
+		lblCantanteClasificacion2.setBackground(new Color(128, 0, 128));
+		lblCantanteClasificacion2.setBounds(419, 258, 76, 62);
+		panelClasificacion.add(lblCantanteClasificacion2);
+
+		lblCantanteClasificacion3 = new JLabel("");
+		lblCantanteClasificacion3.setBackground(new Color(128, 0, 128));
+		lblCantanteClasificacion3.setBounds(419, 373, 76, 62);
+		panelClasificacion.add(lblCantanteClasificacion3);
+
+		lblCantanteClasificacion4 = new JLabel("");
+		lblCantanteClasificacion4.setBackground(new Color(128, 0, 128));
+		lblCantanteClasificacion4.setBounds(419, 486, 76, 62);
+		panelClasificacion.add(lblCantanteClasificacion4);
+
+		lblCantanteClasificacion5 = new JLabel("");
+		lblCantanteClasificacion5.setBackground(new Color(128, 0, 128));
+		lblCantanteClasificacion5.setBounds(419, 599, 76, 62);
+		panelClasificacion.add(lblCantanteClasificacion5);
+
+		lblCantanteClasificacion5_1 = new JLabel("");
+		lblCantanteClasificacion5_1.setBackground(new Color(128, 0, 128));
+		lblCantanteClasificacion5_1.setBounds(919, 145, 76, 62);
+		panelClasificacion.add(lblCantanteClasificacion5_1);
+
+		lblCantanteClasificacion5_2 = new JLabel("");
+		lblCantanteClasificacion5_2.setBackground(new Color(128, 0, 128));
+		lblCantanteClasificacion5_2.setBounds(919, 258, 76, 62);
+		panelClasificacion.add(lblCantanteClasificacion5_2);
+
+		lblCantanteClasificacion5_3 = new JLabel("");
+		lblCantanteClasificacion5_3.setBackground(new Color(128, 0, 128));
+		lblCantanteClasificacion5_3.setBounds(919, 373, 76, 62);
+		panelClasificacion.add(lblCantanteClasificacion5_3);
+
+		lblCantanteClasificacion5_4 = new JLabel("");
+		lblCantanteClasificacion5_4.setBackground(new Color(128, 0, 128));
+		lblCantanteClasificacion5_4.setBounds(919, 486, 76, 62);
+		panelClasificacion.add(lblCantanteClasificacion5_4);
+
+		lblCantanteClasificacion5_5 = new JLabel("");
+		lblCantanteClasificacion5_5.setBackground(new Color(128, 0, 128));
+		lblCantanteClasificacion5_5.setBounds(919, 599, 76, 62);
+		panelClasificacion.add(lblCantanteClasificacion5_5);
 	}
 }
