@@ -29,10 +29,12 @@ public class Controlador implements ActionListener {
 		vista.btnSimularVotaciones.addActionListener(this);
 		vista.btnAtras.addActionListener(this);
 		vista.btnSiguiente.addActionListener(this);
+		vista.btnVerClasficacin.addActionListener(this);
 		iniciarLista();
 		vista.panelInicial.setVisible(true);
 		vista.panelVotaciones.setVisible(false);
 		vista.panelVotaciones2.setVisible(false);
+		vista.panelClasificacion.setVisible(false);
 	}
 	
 	@Override
@@ -224,11 +226,19 @@ public class Controlador implements ActionListener {
 			this.vista.panelVotaciones.setVisible(false);
 			this.vista.panelVotaciones2.setVisible(true);
 			this.vista.panelInicial.setVisible(false);
+			this.vista.panelClasificacion.setVisible(false);
 		}
 		if (vista.btnAtras == e.getSource()) {
 			this.vista.panelVotaciones.setVisible(true);
 			this.vista.panelVotaciones2.setVisible(false);
 			this.vista.panelInicial.setVisible(false);
+			this.vista.panelClasificacion.setVisible(false);
+		}
+		if (vista.btnVerClasficacin == e.getSource()) {
+			this.vista.panelVotaciones.setVisible(false);
+			this.vista.panelVotaciones2.setVisible(false);
+			this.vista.panelInicial.setVisible(false);
+			this.vista.panelClasificacion.setVisible(true);
 		}
 		
 	}
@@ -241,6 +251,7 @@ public class Controlador implements ActionListener {
             	vista.panelInicial.setVisible(false);
             	vista.panelVotaciones2.setVisible(false);
 				vista.panelVotaciones.setVisible(true);
+				vista.panelClasificacion.setVisible(false);
             }
         };
         timer.schedule(task, 1000);
