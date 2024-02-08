@@ -127,7 +127,47 @@ public class Controlador implements ActionListener {
 			        insertarFavoritos(sesion, paisVotando, pais1, pais2, pais3);
 			        Cliente c = new Cliente("favorito",paisVotando, pais1, pais2, pais3);
 			        c.votar();
-			        
+			        if(paisVotando.equalsIgnoreCase("Alemania")) {
+			        	vista.lblPaisAlemania1.setText(pais1);
+			        	vista.lblPaisAlemania2.setText(pais2);
+			        	vista.lblPaisAlemania2.setText(pais3);
+			        }else if(paisVotando.equalsIgnoreCase("Francia")) {
+			        	vista.lblPaisFrancia1.setText(pais1);
+			        	vista.lblPaisFrancia2.setText(pais2);
+			        	vista.lblPaisFrancia3.setText(pais3);
+			        }else if(paisVotando.equalsIgnoreCase("Portugal")) {
+			        	vista.lblPaisPortugal.setText(pais1);
+			        	vista.lblPaisPortugal2.setText(pais2);
+			        	vista.lblPaisPortugal3.setText(pais3);
+			        }else if(paisVotando.equalsIgnoreCase("Grecia")) {
+			        	vista.lblPaisGrecia1 .setText(pais1);
+			        	vista.lblPaisGrecia2.setText(pais2);
+			        	vista.lblPaisGrecia3.setText(pais3);
+			        }else if(paisVotando.equalsIgnoreCase("Italia")) {
+			        	vista.lblPaisItalia1.setText(pais1);
+			        	vista.lblPaisItalia2.setText(pais2);
+			        	vista.lblPaisItalia3.setText(pais3);
+			        }else if(paisVotando.equalsIgnoreCase("Espania")) {
+			        	vista.lblPaisEspaña1.setText(pais1);
+			        	vista.lblPaisEspaña2.setText(pais2);
+			        	vista.lblPaisEspaña3.setText(pais3);
+			        }else if(paisVotando.equalsIgnoreCase("Paises Bajos")) {
+			        	vista.lblPaisPaisesBajos1.setText(pais1);
+			        	vista.lblPaisPaisesBajos2.setText(pais2);
+			        	vista.lblPaisPaisesBajos3.setText(pais3);
+			        }else if(paisVotando.equalsIgnoreCase("Reino Unido")) {
+			        	vista.lblPaisReinoUnido1.setText(pais1);
+			        	vista.lblPaisReinoUnido2.setText(pais2);
+			        	vista.lblPaisReinoUnido3.setText(pais3);
+			        }else if(paisVotando.equalsIgnoreCase("Rumania")) {
+			        	vista.lblPaisRumania1.setText(pais1);
+			        	vista.lblPaisRumania2.setText(pais2);
+			        	vista.lblPaisRumania3.setText(pais3);
+			        }else {
+			        	vista.lblPaisPolonia1.setText(pais1);
+			        	vista.lblPaisPolonia2.setText(pais2);
+			        	vista.lblPaisPolonia3.setText(pais3);
+			        }
 			        vista.progressBar.setValue(vista.progressBar.getValue()+ 10);
 			        puntos.removeAll(puntos);
 			        iniciarLista();
