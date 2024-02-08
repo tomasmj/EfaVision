@@ -75,6 +75,27 @@ public class Vista extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+				panelInicial = new JPanel();
+				panelInicial.setBounds(0, 0, 1171, 845);
+				contentPane.add(panelInicial);
+				panelInicial.setLayout(null);
+				
+						progressBar = new JProgressBar();
+						progressBar.setBackground(Color.BLACK);
+						progressBar.setStringPainted(true);
+						progressBar.setBounds(301, 623, 325, 31);
+						panelInicial.add(progressBar);
+						
+								btnSimularVotaciones = new JButton("SIMULAR VOTACIONES");
+								btnSimularVotaciones.setBounds(301, 547, 325, 56);
+								btnSimularVotaciones.setFont(new Font("Tahoma", Font.BOLD, 22));
+								panelInicial.add(btnSimularVotaciones);
+								
+										lblFondo = new JLabel("");
+										lblFondo.setBounds(0, 0, 943, 682);
+										lblFondo.setIcon(new ImageIcon("src/Imagenes/fondo.jpg"));
+										panelInicial.add(lblFondo);
 
 		panelVotaciones = new JPanel();
 		panelVotaciones.setBounds(0, 0, 1171, 845);
@@ -702,26 +723,5 @@ public class Vista extends JFrame {
 		btnAtras.setFont(new Font("Tahoma", Font.BOLD, 20));
 		btnAtras.setBounds(856, 672, 187, 53);
 		panelVotaciones2.add(btnAtras);
-
-		panelInicial = new JPanel();
-		panelInicial.setBounds(0, 0, 1171, 845);
-		contentPane.add(panelInicial);
-		panelInicial.setLayout(null);
-
-		progressBar = new JProgressBar();
-		progressBar.setBackground(Color.BLACK);
-		progressBar.setStringPainted(true);
-		progressBar.setBounds(301, 623, 325, 31);
-		panelInicial.add(progressBar);
-
-		btnSimularVotaciones = new JButton("SIMULAR VOTACIONES");
-		btnSimularVotaciones.setBounds(301, 547, 325, 56);
-		btnSimularVotaciones.setFont(new Font("Tahoma", Font.BOLD, 22));
-		panelInicial.add(btnSimularVotaciones);
-
-		lblFondo = new JLabel("");
-		lblFondo.setBounds(0, 0, 943, 682);
-		lblFondo.setIcon(new ImageIcon("src/Imagenes/fondo.jpg"));
-		panelInicial.add(lblFondo);
 	}
 }

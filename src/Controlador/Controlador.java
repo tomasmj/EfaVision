@@ -29,6 +29,9 @@ public class Controlador implements ActionListener {
 		vista.btnAtras.addActionListener(this);
 		vista.btnSiguiente.addActionListener(this);
 		iniciarLista();
+		vista.panelInicial.setVisible(true);
+		vista.panelVotaciones.setVisible(false);
+		vista.panelVotaciones2.setVisible(false);
 	}
 	
 	@Override
@@ -124,6 +127,7 @@ public class Controlador implements ActionListener {
 			        insertarFavoritos(sesion, paisVotando, pais1, pais2, pais3);
 			        Cliente c = new Cliente("favorito",paisVotando, pais1, pais2, pais3);
 			        c.votar();
+			        
 			        vista.progressBar.setValue(vista.progressBar.getValue()+ 10);
 			        puntos.removeAll(puntos);
 			        iniciarLista();
@@ -160,6 +164,7 @@ public class Controlador implements ActionListener {
             @Override
             public void run() {
             	vista.panelInicial.setVisible(false);
+            	vista.panelVotaciones2.setVisible(false);
 				vista.panelVotaciones.setVisible(true);
             }
         };
