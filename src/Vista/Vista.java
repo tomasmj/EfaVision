@@ -48,8 +48,8 @@ public class Vista extends JFrame {
 			lblCantantePaisesBajos3, lblPaisClasificacion6, lblPaisClasificacion7, lblPaisClasificacion8,
 			lblPaisClasificacion9, lblPaisClasificacion10, lblCantanteClasificacion1, lblCantanteClasificacion2,
 			lblCantanteClasificacion3, lblCantanteClasificacion4, lblCantanteClasificacion5,
-			lblCantanteClasificacion5_1, lblCantanteClasificacion5_2, lblClasificacion, lblCantanteClasificacion5_3,
-			lblCantanteClasificacion5_4, lblCantanteClasificacion5_5, lblClasificacion1, lblClasificacion2,
+			lblCantanteClasificacion6, lblCantanteClasificacion7, lblClasificacion, lblCantanteClasificacion8,
+			lblCantanteClasificacion9, lblCantanteClasificacion10, lblClasificacion1, lblClasificacion2,
 			lblClasificacion3, lblClasificacion4, lblClasificacion5, lblClasificacion10, lblClasificacion9,
 			lblClasificacion8, lblClasificacion7, lblClasificacion6, lblPaisClasificacion1, lblPaisClasificacion2,
 			lblPaisClasificacion3, lblPaisClasificacion4, lblPaisClasificacion5;
@@ -222,35 +222,35 @@ public class Vista extends JFrame {
 																																																										lblCantanteClasificacion5.setBounds(419, 599, 76, 62);
 																																																										panelClasificacion.add(lblCantanteClasificacion5);
 																																																										
-																																																												lblCantanteClasificacion5_1 = new JLabel("");
-																																																												lblCantanteClasificacion5_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-																																																												lblCantanteClasificacion5_1.setBackground(new Color(128, 0, 128));
-																																																												lblCantanteClasificacion5_1.setBounds(919, 145, 76, 62);
-																																																												panelClasificacion.add(lblCantanteClasificacion5_1);
+																																																												lblCantanteClasificacion6 = new JLabel("");
+																																																												lblCantanteClasificacion6.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																												lblCantanteClasificacion6.setBackground(new Color(128, 0, 128));
+																																																												lblCantanteClasificacion6.setBounds(919, 145, 76, 62);
+																																																												panelClasificacion.add(lblCantanteClasificacion6);
 																																																												
-																																																														lblCantanteClasificacion5_2 = new JLabel("");
-																																																														lblCantanteClasificacion5_2.setFont(new Font("Tahoma", Font.BOLD, 20));
-																																																														lblCantanteClasificacion5_2.setBackground(new Color(128, 0, 128));
-																																																														lblCantanteClasificacion5_2.setBounds(919, 258, 76, 62);
-																																																														panelClasificacion.add(lblCantanteClasificacion5_2);
+																																																														lblCantanteClasificacion7 = new JLabel("");
+																																																														lblCantanteClasificacion7.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																														lblCantanteClasificacion7.setBackground(new Color(128, 0, 128));
+																																																														lblCantanteClasificacion7.setBounds(919, 258, 76, 62);
+																																																														panelClasificacion.add(lblCantanteClasificacion7);
 																																																														
-																																																																lblCantanteClasificacion5_3 = new JLabel("");
-																																																																lblCantanteClasificacion5_3.setFont(new Font("Tahoma", Font.BOLD, 20));
-																																																																lblCantanteClasificacion5_3.setBackground(new Color(128, 0, 128));
-																																																																lblCantanteClasificacion5_3.setBounds(919, 373, 76, 62);
-																																																																panelClasificacion.add(lblCantanteClasificacion5_3);
+																																																																lblCantanteClasificacion8 = new JLabel("");
+																																																																lblCantanteClasificacion8.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																lblCantanteClasificacion8.setBackground(new Color(128, 0, 128));
+																																																																lblCantanteClasificacion8.setBounds(919, 373, 76, 62);
+																																																																panelClasificacion.add(lblCantanteClasificacion8);
 																																																																
-																																																																		lblCantanteClasificacion5_4 = new JLabel("");
-																																																																		lblCantanteClasificacion5_4.setFont(new Font("Tahoma", Font.BOLD, 20));
-																																																																		lblCantanteClasificacion5_4.setBackground(new Color(128, 0, 128));
-																																																																		lblCantanteClasificacion5_4.setBounds(919, 486, 76, 62);
-																																																																		panelClasificacion.add(lblCantanteClasificacion5_4);
+																																																																		lblCantanteClasificacion9 = new JLabel("");
+																																																																		lblCantanteClasificacion9.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																		lblCantanteClasificacion9.setBackground(new Color(128, 0, 128));
+																																																																		lblCantanteClasificacion9.setBounds(919, 486, 76, 62);
+																																																																		panelClasificacion.add(lblCantanteClasificacion9);
 																																																																		
-																																																																				lblCantanteClasificacion5_5 = new JLabel("");
-																																																																				lblCantanteClasificacion5_5.setFont(new Font("Tahoma", Font.BOLD, 20));
-																																																																				lblCantanteClasificacion5_5.setBackground(new Color(128, 0, 128));
-																																																																				lblCantanteClasificacion5_5.setBounds(919, 599, 76, 62);
-																																																																				panelClasificacion.add(lblCantanteClasificacion5_5);
+																																																																				lblCantanteClasificacion10 = new JLabel("");
+																																																																				lblCantanteClasificacion10.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																				lblCantanteClasificacion10.setBackground(new Color(128, 0, 128));
+																																																																				lblCantanteClasificacion10.setBounds(919, 599, 76, 62);
+																																																																				panelClasificacion.add(lblCantanteClasificacion10);
 				
 
 				panelInicial = new JPanel();

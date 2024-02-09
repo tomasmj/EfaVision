@@ -23,7 +23,7 @@ public class Controlador implements ActionListener {
 	Vista vista = new Vista() ;
 	int votos18=0,votos26=0,votos41=0,votos66=0;
 	ArrayList<PaisPuntos> puntos = new ArrayList<PaisPuntos>();
-	
+	String cantante;
 	public Controlador(Vista vista) {
 		this.vista = vista;
 		vista.btnSimularVotaciones.addActionListener(this);
@@ -209,9 +209,48 @@ public class Controlador implements ActionListener {
 			        puntos.removeAll(puntos);
 			        iniciarLista();
 				}	
-				String ganador = devolverGanador(sesion);
-				Cliente c1 = new Cliente("ganador",ganador);
+				List<String> paisesOrdenados = devolverGanador(sesion);
+				Cliente c1 = new Cliente("ganador",paisesOrdenados.get(0));
 				c1.votar();
+				vista.lblPaisClasificacion1.setText(paisesOrdenados.get(0));
+				cantante=devolverCantante(sesion, paisesOrdenados.get(0));
+				vista.lblCantanteClasificacion1.setIcon(new ImageIcon("src/Cantantes/"+cantante+".png"));
+				
+				vista.lblPaisClasificacion2.setText(paisesOrdenados.get(1));
+				cantante=devolverCantante(sesion, paisesOrdenados.get(1));
+				vista.lblCantanteClasificacion2.setIcon(new ImageIcon("src/Cantantes/"+cantante+".png"));
+				
+				vista.lblPaisClasificacion3.setText(paisesOrdenados.get(2));
+				cantante=devolverCantante(sesion, paisesOrdenados.get(2));
+				vista.lblCantanteClasificacion3.setIcon(new ImageIcon("src/Cantantes/"+cantante+".png"));
+				
+				vista.lblPaisClasificacion4.setText(paisesOrdenados.get(3));
+				cantante=devolverCantante(sesion, paisesOrdenados.get(3));
+				vista.lblCantanteClasificacion4.setIcon(new ImageIcon("src/Cantantes/"+cantante+".png"));
+				
+				vista.lblPaisClasificacion5.setText(paisesOrdenados.get(4));
+				cantante=devolverCantante(sesion, paisesOrdenados.get(4));
+				vista.lblCantanteClasificacion5.setIcon(new ImageIcon("src/Cantantes/"+cantante+".png"));
+				
+				vista.lblPaisClasificacion6.setText(paisesOrdenados.get(5));
+				cantante=devolverCantante(sesion, paisesOrdenados.get(5));
+				vista.lblCantanteClasificacion6.setIcon(new ImageIcon("src/Cantantes/"+cantante+".png"));
+				
+				vista.lblPaisClasificacion7.setText(paisesOrdenados.get(6));
+				cantante=devolverCantante(sesion, paisesOrdenados.get(6));
+				vista.lblCantanteClasificacion7.setIcon(new ImageIcon("src/Cantantes/"+cantante+".png"));
+				
+				vista.lblPaisClasificacion8.setText(paisesOrdenados.get(7));
+				cantante=devolverCantante(sesion, paisesOrdenados.get(7));
+				vista.lblCantanteClasificacion8.setIcon(new ImageIcon("src/Cantantes/"+cantante+".png"));
+				
+				vista.lblPaisClasificacion9.setText(paisesOrdenados.get(8));
+				cantante=devolverCantante(sesion, paisesOrdenados.get(8));
+				vista.lblCantanteClasificacion9.setIcon(new ImageIcon("src/Cantantes/"+cantante+".png"));
+				
+				vista.lblPaisClasificacion10.setText(paisesOrdenados.get(9));
+				cantante=devolverCantante(sesion, paisesOrdenados.get(9));
+				vista.lblCantanteClasificacion10.setIcon(new ImageIcon("src/Cantantes/"+cantante+".png"));
 				esperar();
 			
 			} catch(Exception a) {
@@ -280,15 +319,20 @@ public class Controlador implements ActionListener {
 	return cantante;
 	}
 	
-	public String devolverGanador(SessionFactory session) {
+	public List<String> devolverGanador(SessionFactory session) {
 		String ganador = null;
 		Session sesion = null;
+		List<String> paisesOrdenados = new ArrayList<>();
 		try {
 			sesion=session.getCurrentSession();
 			sesion.beginTransaction();
 			
-			Query query = sesion.createSQLQuery("select PAIS from puntos_totales order by PUNTOS desc limit 1");
-			ganador = (String) query.getSingleResult();
+			Query query = sesion.createSQLQuery("select PAIS from puntos_totales order by PUNTOS desc");
+			List<String> object =query.list();
+			
+			for(int i=0;i<object.size();i++) {
+				paisesOrdenados.add(object.get(i));
+			}
 			sesion.getTransaction().commit();
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -299,7 +343,7 @@ public class Controlador implements ActionListener {
         }
 		
 		
-		return ganador;
+		return paisesOrdenados;
 	}
 	public void crearTablaPuntos(SessionFactory session) {
 		Session sesion = null;
