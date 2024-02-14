@@ -30,6 +30,7 @@ public class Controlador implements ActionListener {
 		vista.btnAtras.addActionListener(this);
 		vista.btnSiguiente.addActionListener(this);
 		vista.btnVerClasficacin.addActionListener(this);
+		vista.btnAtrasClasificacion.addActionListener(this);
 		iniciarLista();
 		vista.panelInicial.setVisible(true);
 		vista.panelVotaciones.setVisible(false);
@@ -278,6 +279,12 @@ public class Controlador implements ActionListener {
 			this.vista.panelVotaciones2.setVisible(false);
 			this.vista.panelInicial.setVisible(false);
 			this.vista.panelClasificacion.setVisible(true);
+		}
+		if (vista.btnAtrasClasificacion == e.getSource()) {
+			this.vista.panelVotaciones.setVisible(false);
+			this.vista.panelVotaciones2.setVisible(true);
+			this.vista.panelInicial.setVisible(false);
+			this.vista.panelClasificacion.setVisible(false);
 		}
 		
 	}
