@@ -88,189 +88,190 @@ public class Vista extends JFrame {
 		panelClasificacion.setLayout(null);
 
 		lblClasificacion = new JLabel("Clasificación");
-		lblClasificacion.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion.setBounds(419, 27, 332, 63);
+		lblClasificacion.setForeground(new Color(255, 255, 255));
+		lblClasificacion.setFont(new Font("Tahoma", Font.BOLD, 40));
+		lblClasificacion.setBounds(404, 47, 332, 63);
 		panelClasificacion.add(lblClasificacion);
 
 		lblClasificacion1 = new JLabel("1º");
 		lblClasificacion1.setForeground(new Color(244, 208, 2));
 		lblClasificacion1.setBackground(new Color(240, 240, 240));
 		lblClasificacion1.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion1.setBounds(81, 122, 63, 55);
+		lblClasificacion1.setBounds(82, 164, 63, 55);
 		panelClasificacion.add(lblClasificacion1);
 
 		lblClasificacion2 = new JLabel("2º");
-		lblClasificacion2.setForeground(new Color(128, 128, 128));
+		lblClasificacion2.setForeground(new Color(100, 100, 100));
 		lblClasificacion2.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion2.setBounds(81, 235, 63, 55);
+		lblClasificacion2.setBounds(82, 277, 63, 55);
 		panelClasificacion.add(lblClasificacion2);
 
 		lblClasificacion3 = new JLabel("3º");
 		lblClasificacion3.setForeground(new Color(189, 95, 0));
 		lblClasificacion3.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion3.setBounds(81, 350, 63, 55);
+		lblClasificacion3.setBounds(82, 392, 63, 55);
 		panelClasificacion.add(lblClasificacion3);
 
 		lblClasificacion4 = new JLabel("4º");
 		lblClasificacion4.setForeground(new Color(255, 255, 255));
 		lblClasificacion4.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion4.setBounds(81, 463, 63, 55);
+		lblClasificacion4.setBounds(82, 505, 63, 55);
 		panelClasificacion.add(lblClasificacion4);
 
 		lblClasificacion5 = new JLabel("5º");
 		lblClasificacion5.setForeground(new Color(255, 255, 255));
 		lblClasificacion5.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion5.setBounds(81, 576, 63, 55);
+		lblClasificacion5.setBounds(82, 618, 63, 55);
 		panelClasificacion.add(lblClasificacion5);
 
 		lblClasificacion10 = new JLabel("10º");
 		lblClasificacion10.setForeground(new Color(255, 255, 255));
 		lblClasificacion10.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion10.setBounds(583, 576, 63, 55);
+		lblClasificacion10.setBounds(584, 618, 63, 55);
 		panelClasificacion.add(lblClasificacion10);
 
 		lblClasificacion9 = new JLabel("9º");
 		lblClasificacion9.setForeground(new Color(255, 255, 255));
 		lblClasificacion9.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion9.setBounds(583, 463, 63, 55);
+		lblClasificacion9.setBounds(584, 505, 63, 55);
 		panelClasificacion.add(lblClasificacion9);
 
 		lblClasificacion8 = new JLabel("8º");
 		lblClasificacion8.setForeground(new Color(255, 255, 255));
 		lblClasificacion8.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion8.setBounds(583, 350, 63, 55);
+		lblClasificacion8.setBounds(584, 392, 63, 55);
 		panelClasificacion.add(lblClasificacion8);
 
 		lblClasificacion7 = new JLabel("7º");
 		lblClasificacion7.setForeground(new Color(255, 255, 255));
 		lblClasificacion7.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion7.setBounds(583, 235, 63, 55);
+		lblClasificacion7.setBounds(584, 277, 63, 55);
 		panelClasificacion.add(lblClasificacion7);
 
 		lblClasificacion6 = new JLabel("6º");
 		lblClasificacion6.setForeground(new Color(255, 255, 255));
 		lblClasificacion6.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblClasificacion6.setBounds(583, 122, 63, 55);
+		lblClasificacion6.setBounds(584, 164, 63, 55);
 		panelClasificacion.add(lblClasificacion6);
 
 		lblPaisClasificacion1 = new JLabel("");
 		lblPaisClasificacion1.setForeground(new Color(244, 208, 2));
-		lblPaisClasificacion1.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblPaisClasificacion1.setBounds(154, 130, 193, 47);
+		lblPaisClasificacion1.setFont(new Font("Tahoma", Font.BOLD, 27));
+		lblPaisClasificacion1.setBounds(155, 172, 193, 47);
 		panelClasificacion.add(lblPaisClasificacion1);
 
 		lblPaisClasificacion2 = new JLabel("");
-		lblPaisClasificacion2.setForeground(new Color(128, 128, 128));
-		lblPaisClasificacion2.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblPaisClasificacion2.setBounds(154, 243, 193, 47);
+		lblPaisClasificacion2.setForeground(new Color(100, 100, 100));
+		lblPaisClasificacion2.setFont(new Font("Tahoma", Font.BOLD, 27));
+		lblPaisClasificacion2.setBounds(155, 285, 193, 47);
 		panelClasificacion.add(lblPaisClasificacion2);
 
 		lblPaisClasificacion3 = new JLabel("");
 		lblPaisClasificacion3.setForeground(new Color(189, 95, 0));
-		lblPaisClasificacion3.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblPaisClasificacion3.setBounds(154, 358, 193, 47);
+		lblPaisClasificacion3.setFont(new Font("Tahoma", Font.BOLD, 27));
+		lblPaisClasificacion3.setBounds(155, 400, 193, 47);
 		panelClasificacion.add(lblPaisClasificacion3);
 
 		lblPaisClasificacion4 = new JLabel("");
 		lblPaisClasificacion4.setForeground(new Color(255, 255, 255));
-		lblPaisClasificacion4.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblPaisClasificacion4.setBounds(154, 471, 193, 47);
+		lblPaisClasificacion4.setFont(new Font("Tahoma", Font.BOLD, 27));
+		lblPaisClasificacion4.setBounds(155, 513, 193, 47);
 		panelClasificacion.add(lblPaisClasificacion4);
 
 		lblPaisClasificacion5 = new JLabel("");
 		lblPaisClasificacion5.setForeground(new Color(255, 255, 255));
-		lblPaisClasificacion5.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblPaisClasificacion5.setBounds(154, 584, 193, 47);
+		lblPaisClasificacion5.setFont(new Font("Tahoma", Font.BOLD, 27));
+		lblPaisClasificacion5.setBounds(155, 626, 193, 47);
 		panelClasificacion.add(lblPaisClasificacion5);
 
 		lblPaisClasificacion6 = new JLabel("");
 		lblPaisClasificacion6.setForeground(new Color(255, 255, 255));
-		lblPaisClasificacion6.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblPaisClasificacion6.setBounds(656, 130, 193, 47);
+		lblPaisClasificacion6.setFont(new Font("Tahoma", Font.BOLD, 27));
+		lblPaisClasificacion6.setBounds(657, 172, 193, 47);
 		panelClasificacion.add(lblPaisClasificacion6);
 
 		lblPaisClasificacion7 = new JLabel("");
 		lblPaisClasificacion7.setForeground(new Color(255, 255, 255));
-		lblPaisClasificacion7.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblPaisClasificacion7.setBounds(656, 243, 193, 47);
+		lblPaisClasificacion7.setFont(new Font("Tahoma", Font.BOLD, 27));
+		lblPaisClasificacion7.setBounds(657, 285, 193, 47);
 		panelClasificacion.add(lblPaisClasificacion7);
 
 		lblPaisClasificacion8 = new JLabel("");
 		lblPaisClasificacion8.setForeground(new Color(255, 255, 255));
-		lblPaisClasificacion8.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblPaisClasificacion8.setBounds(656, 358, 193, 47);
+		lblPaisClasificacion8.setFont(new Font("Tahoma", Font.BOLD, 27));
+		lblPaisClasificacion8.setBounds(657, 400, 193, 47);
 		panelClasificacion.add(lblPaisClasificacion8);
 
 		lblPaisClasificacion9 = new JLabel("");
 		lblPaisClasificacion9.setForeground(new Color(255, 255, 255));
-		lblPaisClasificacion9.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblPaisClasificacion9.setBounds(656, 471, 193, 47);
+		lblPaisClasificacion9.setFont(new Font("Tahoma", Font.BOLD, 27));
+		lblPaisClasificacion9.setBounds(657, 513, 193, 47);
 		panelClasificacion.add(lblPaisClasificacion9);
 
 		lblPaisClasificacion10 = new JLabel("");
 		lblPaisClasificacion10.setForeground(new Color(255, 255, 255));
-		lblPaisClasificacion10.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblPaisClasificacion10.setBounds(656, 584, 193, 47);
+		lblPaisClasificacion10.setFont(new Font("Tahoma", Font.BOLD, 27));
+		lblPaisClasificacion10.setBounds(657, 626, 193, 47);
 		panelClasificacion.add(lblPaisClasificacion10);
 
 		lblCantanteClasificacion1 = new JLabel("");
 		lblCantanteClasificacion1.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblCantanteClasificacion1.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion1.setBounds(391, 115, 76, 62);
+		lblCantanteClasificacion1.setBounds(392, 157, 76, 62);
 		panelClasificacion.add(lblCantanteClasificacion1);
 
 		lblCantanteClasificacion2 = new JLabel("");
 		lblCantanteClasificacion2.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblCantanteClasificacion2.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion2.setBounds(391, 228, 76, 62);
+		lblCantanteClasificacion2.setBounds(392, 270, 76, 62);
 		panelClasificacion.add(lblCantanteClasificacion2);
 
 		lblCantanteClasificacion3 = new JLabel("");
 		lblCantanteClasificacion3.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblCantanteClasificacion3.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion3.setBounds(391, 343, 76, 62);
+		lblCantanteClasificacion3.setBounds(392, 385, 76, 62);
 		panelClasificacion.add(lblCantanteClasificacion3);
 
 		lblCantanteClasificacion4 = new JLabel("");
 		lblCantanteClasificacion4.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblCantanteClasificacion4.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion4.setBounds(391, 456, 76, 62);
+		lblCantanteClasificacion4.setBounds(392, 498, 76, 62);
 		panelClasificacion.add(lblCantanteClasificacion4);
 
 		lblCantanteClasificacion5 = new JLabel("");
 		lblCantanteClasificacion5.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblCantanteClasificacion5.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion5.setBounds(391, 569, 76, 62);
+		lblCantanteClasificacion5.setBounds(392, 611, 76, 62);
 		panelClasificacion.add(lblCantanteClasificacion5);
 
 		lblCantanteClasificacion6 = new JLabel("");
 		lblCantanteClasificacion6.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblCantanteClasificacion6.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion6.setBounds(891, 115, 76, 62);
+		lblCantanteClasificacion6.setBounds(892, 157, 76, 62);
 		panelClasificacion.add(lblCantanteClasificacion6);
 
 		lblCantanteClasificacion7 = new JLabel("");
 		lblCantanteClasificacion7.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblCantanteClasificacion7.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion7.setBounds(891, 228, 76, 62);
+		lblCantanteClasificacion7.setBounds(892, 270, 76, 62);
 		panelClasificacion.add(lblCantanteClasificacion7);
 
 		lblCantanteClasificacion8 = new JLabel("");
 		lblCantanteClasificacion8.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblCantanteClasificacion8.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion8.setBounds(891, 343, 76, 62);
+		lblCantanteClasificacion8.setBounds(892, 385, 76, 62);
 		panelClasificacion.add(lblCantanteClasificacion8);
 
 		lblCantanteClasificacion9 = new JLabel("");
 		lblCantanteClasificacion9.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblCantanteClasificacion9.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion9.setBounds(891, 456, 76, 62);
+		lblCantanteClasificacion9.setBounds(892, 498, 76, 62);
 		panelClasificacion.add(lblCantanteClasificacion9);
 
 		lblCantanteClasificacion10 = new JLabel("");
 		lblCantanteClasificacion10.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblCantanteClasificacion10.setBackground(new Color(128, 0, 128));
-		lblCantanteClasificacion10.setBounds(891, 569, 76, 62);
+		lblCantanteClasificacion10.setBounds(892, 611, 76, 62);
 		panelClasificacion.add(lblCantanteClasificacion10);
 
 		btnAtrasClasificacion = new JButton("Atrás");
