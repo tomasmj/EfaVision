@@ -52,7 +52,8 @@ public class Vista extends JFrame {
 			lblCantanteClasificacion10, lblClasificacion1, lblClasificacion2, lblClasificacion3, lblClasificacion4,
 			lblClasificacion5, lblClasificacion10, lblClasificacion9, lblClasificacion8, lblClasificacion7,
 			lblClasificacion6, lblPaisClasificacion1, lblPaisClasificacion2, lblPaisClasificacion3,
-			lblPaisClasificacion4, lblPaisClasificacion5, lblBanderaFrancia;
+			lblPaisClasificacion4, lblPaisClasificacion5, lblBanderaFrancia, lblFondoVotacion2, lblFondoVotacion1,
+			lblFondoClasificacion;
 	public JProgressBar progressBar;
 
 	/**
@@ -80,6 +81,27 @@ public class Vista extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+				panelInicial = new JPanel();
+				panelInicial.setBounds(0, 0, 1107, 845);
+				contentPane.add(panelInicial);
+				panelInicial.setLayout(null);
+				
+						progressBar = new JProgressBar();
+						progressBar.setBackground(Color.BLACK);
+						progressBar.setStringPainted(true);
+						progressBar.setBounds(399, 625, 325, 31);
+						panelInicial.add(progressBar);
+						
+								btnSimularVotaciones = new JButton("SIMULAR VOTACIONES");
+								btnSimularVotaciones.setBounds(399, 549, 325, 56);
+								btnSimularVotaciones.setFont(new Font("Tahoma", Font.BOLD, 22));
+								panelInicial.add(btnSimularVotaciones);
+								
+										lblFondo = new JLabel("");
+										lblFondo.setBounds(0, 0, 1107, 845);
+										lblFondo.setIcon(new ImageIcon("src/Imagenes/EurovisionFondo.jpg"));
+										panelInicial.add(lblFondo);
 
 		panelClasificacion = new JPanel();
 		panelClasificacion.setBounds(0, 0, 1107, 845);
@@ -255,27 +277,11 @@ public class Vista extends JFrame {
 		btnAtrasClasificacion.setFont(new Font("Tahoma", Font.BOLD, 20));
 		btnAtrasClasificacion.setBounds(788, 715, 206, 53);
 		panelClasificacion.add(btnAtrasClasificacion);
-
-		panelInicial = new JPanel();
-		panelInicial.setBounds(0, 0, 1107, 845);
-		contentPane.add(panelInicial);
-		panelInicial.setLayout(null);
-
-		progressBar = new JProgressBar();
-		progressBar.setBackground(Color.BLACK);
-		progressBar.setStringPainted(true);
-		progressBar.setBounds(301, 623, 325, 31);
-		panelInicial.add(progressBar);
-
-		btnSimularVotaciones = new JButton("SIMULAR VOTACIONES");
-		btnSimularVotaciones.setBounds(301, 547, 325, 56);
-		btnSimularVotaciones.setFont(new Font("Tahoma", Font.BOLD, 22));
-		panelInicial.add(btnSimularVotaciones);
-
-		lblFondo = new JLabel("");
-		lblFondo.setBounds(0, 0, 1107, 845);
-		lblFondo.setIcon(new ImageIcon("src/Imagenes/fondo.jpg"));
-		panelInicial.add(lblFondo);
+		
+		lblFondoClasificacion = new JLabel("");
+		lblFondoClasificacion.setBounds(0, 0, 1107, 845);
+		panelClasificacion.add(lblFondoClasificacion);
+		lblFondoClasificacion.setIcon(new ImageIcon("src/Imagenes/fondoClasificacion.jpg"));
 
 		panelVotaciones = new JPanel();
 		panelVotaciones.setBounds(0, 0, 1107, 845);
@@ -586,6 +592,11 @@ public class Vista extends JFrame {
 		lblBanderaFrancia.setBounds(383, 73, 117, 62);
 		lblBanderaFrancia.setIcon(new ImageIcon("src/Imagenes/francia.png"));
 		panelVotaciones.add(lblBanderaFrancia);
+		
+		lblFondoVotacion1 = new JLabel("");
+		lblFondoVotacion1.setBounds(0, 0, 1107, 845);
+		panelVotaciones.add(lblFondoVotacion1);
+		lblFondoVotacion1.setIcon(new ImageIcon("src/Imagenes/fondoVotaciones.jpg"));
 
 		panelVotaciones2 = new JPanel();
 		panelVotaciones2.setLayout(null);
@@ -891,6 +902,11 @@ public class Vista extends JFrame {
 		lblCantantePaisesBajos3.setBackground(new Color(128, 0, 128));
 		lblCantantePaisesBajos3.setBounds(938, 314, 76, 62);
 		panelVotaciones2.add(lblCantantePaisesBajos3);
+		
+		lblFondoVotacion2 = new JLabel("");
+		lblFondoVotacion2.setBounds(0, 0, 1107, 845);
+		panelVotaciones2.add(lblFondoVotacion2);
+		lblFondoVotacion2.setIcon(new ImageIcon("src/Imagenes/fondoVotaciones.jpg"));
 
 		btnAtras = new JButton("Atrás");
 		btnAtras.setFont(new Font("Tahoma", Font.BOLD, 20));
