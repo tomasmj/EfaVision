@@ -32,17 +32,14 @@ public class Controlador implements ActionListener {
 		vista.btnVerClasficacin.addActionListener(this);
 		vista.btnAtrasClasificacion.addActionListener(this);
 		iniciarLista();
+		ocultarPaneles();
 		vista.panelInicial.setVisible(true);
-		vista.panelVotaciones.setVisible(false);
-		vista.panelVotaciones2.setVisible(false);
-		vista.panelClasificacion.setVisible(false);
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(vista.btnSimularVotaciones == e.getSource()) {
 			SessionFactory sesion = null;
-			
 			try {
 				Configuration configuracion = new Configuration();
 				configuracion.configure("hibernate.cfg.xml");
@@ -55,67 +52,26 @@ public class Controlador implements ActionListener {
 				crearTablaPuntos(sesion);
 				System.out.println("Crear tabla puntos");
 				List<PorcentajesRangoedad> porcentajes = obtenerPorcentajes(sesion);
+				
 				for(int i = 0;i<porcentajes.size();i++) {
 					insertarPaises(sesion, porcentajes.get(i).getNombrePais());
-
 				}
 
 				for(int i=0;i<porcentajes.size();i++) {
 					String paisVotando=porcentajes.get(i).getNombrePais();
 					System.out.println(paisVotando);
 					votos18=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRango1825()/100))/500000);
-					while(votos18>0) {
-						Puntos hilo = new Puntos(18);
-						hilo.start();
-						hilo.join();
-						String pais = hilo.getPais();
-						for(int j=0;j<puntos.size();j++) {
-							if(puntos.get(j).getPais().equalsIgnoreCase(pais)) {
-								puntos.get(j).setPuntos(puntos.get(j).getPuntos()+1);
-							}
-						}
-						votos18--;
-					}
+					votar(votos18,18);
 					
 					votos26=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRango2640()/100))/500000);
-					while(votos26>0) {
-						Puntos hilo = new Puntos(26);
-						hilo.start();
-						hilo.join();
-						String pais = hilo.getPais();
-						for(int j=0;j<puntos.size();j++) {
-							if(puntos.get(j).getPais().equalsIgnoreCase(pais)) {
-								puntos.get(j).setPuntos(puntos.get(j).getPuntos()+1);
-							}
-						}
-						votos26--;
-					}
+					votar(votos26,26);
+					
 					votos41=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRango4165()/100))/500000);
-					while(votos41>0) {
-						Puntos hilo = new Puntos(41);
-						hilo.start();
-						hilo.join();
-						String pais = hilo.getPais();
-						for(int j=0;j<puntos.size();j++) {
-							if(puntos.get(j).getPais().equalsIgnoreCase(pais)) {
-								puntos.get(j).setPuntos(puntos.get(j).getPuntos()+1);
-							}
-						}
-						votos41--;
-					}
+					votar(votos41,41);
+					
 					votos66=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRangoMas66()/100))/500000);
-					while(votos66>0) {
-						Puntos hilo = new Puntos(66);
-						hilo.start();
-						hilo.join();
-						String pais = hilo.getPais();
-						for(int j=0;j<puntos.size();j++) {
-							if(puntos.get(j).getPais().equalsIgnoreCase(pais)) {
-								puntos.get(j).setPuntos(puntos.get(j).getPuntos()+1);
-							}
-						}
-						votos66--;
-					}
+					votar(votos66,66);
+					
 			        Collections.sort(puntos, Comparator.comparingInt(PaisPuntos::getPuntos).reversed());
 			        System.out.println(puntos.toString());
 
@@ -127,12 +83,12 @@ public class Controlador implements ActionListener {
 			        updatePuntos(sesion, pais2, 10 );
 			        String cantante2=devolverCantante(sesion, pais2);
 
-
 			        String pais3=puntos.get(2).getPais();
 			        updatePuntos(sesion, pais3, 8);
 			        String cantante3=devolverCantante(sesion, pais3);
 			        
 			        insertarFavoritos(sesion, paisVotando, pais1, pais2, pais3);
+			        
 			        Cliente c = new Cliente("favorito",paisVotando, pais1, pais2, pais3);
 			        c.votar();
 			        if(paisVotando.equalsIgnoreCase("Alemania")) {
@@ -206,7 +162,7 @@ public class Controlador implements ActionListener {
 			        	vista.lblPaisPolonia3.setText(pais3);
 			        	vista.lblCantantePolonia3.setIcon(new ImageIcon("src/Cantantes/"+cantante3+".png"));
 			        }
-			        vista.progressBar.setValue(vista.progressBar.getValue()+ 10);
+			        vista.progressBar.setValue(100);
 			        puntos.removeAll(puntos);
 			        iniciarLista();
 				}	
@@ -262,31 +218,45 @@ public class Controlador implements ActionListener {
 				}
 			}
 		}
+		
 		if (vista.btnSiguiente == e.getSource()) {
-			this.vista.panelVotaciones.setVisible(false);
+			ocultarPaneles();
 			this.vista.panelVotaciones2.setVisible(true);
-			this.vista.panelInicial.setVisible(false);
-			this.vista.panelClasificacion.setVisible(false);
 		}
 		if (vista.btnAtras == e.getSource()) {
+			ocultarPaneles();
 			this.vista.panelVotaciones.setVisible(true);
-			this.vista.panelVotaciones2.setVisible(false);
-			this.vista.panelInicial.setVisible(false);
-			this.vista.panelClasificacion.setVisible(false);
 		}
 		if (vista.btnVerClasficacin == e.getSource()) {
-			this.vista.panelVotaciones.setVisible(false);
-			this.vista.panelVotaciones2.setVisible(false);
-			this.vista.panelInicial.setVisible(false);
+			ocultarPaneles();
 			this.vista.panelClasificacion.setVisible(true);
 		}
 		if (vista.btnAtrasClasificacion == e.getSource()) {
-			this.vista.panelVotaciones.setVisible(false);
 			this.vista.panelVotaciones2.setVisible(true);
-			this.vista.panelInicial.setVisible(false);
-			this.vista.panelClasificacion.setVisible(false);
+			ocultarPaneles();
+		}		
+	}
+
+	public void ocultarPaneles() {
+		this.vista.panelVotaciones.setVisible(false);
+		this.vista.panelVotaciones2.setVisible(false);
+		this.vista.panelInicial.setVisible(false);
+		this.vista.panelClasificacion.setVisible(false);
+	}
+
+	public void votar(int votos,int edad) throws InterruptedException {
+		while(votos>0) {
+			Puntos hilo = new Puntos(edad);
+			hilo.start();
+			hilo.join();
+			String pais = hilo.getPais();
+			for(int j=0;j<puntos.size();j++) {
+				if(puntos.get(j).getPais().equalsIgnoreCase(pais)) {
+					puntos.get(j).setPuntos(puntos.get(j).getPuntos()+1);
+				}
+			}
+			votos--;
 		}
-		
 	}
 	
 	public  void esperar() {
@@ -320,14 +290,11 @@ public class Controlador implements ActionListener {
     	if(sesion!=null) {
     		sesion.close();
     	}
-    }
-	
-	
-	return cantante;
+    }		
+		return cantante;
 	}
 	
 	public List<String> devolverGanador(SessionFactory session) {
-		String ganador = null;
 		Session sesion = null;
 		List<String> paisesOrdenados = new ArrayList<>();
 		try {
@@ -368,6 +335,10 @@ public class Controlador implements ActionListener {
 			
 			sesion.getTransaction().commit();
 		}catch(Exception e) {
+			// En caso de error, realizar rollback
+            if (sesion != null) {
+                sesion.getTransaction().rollback();
+            }
 			e.printStackTrace();
 		}finally {
         	if(sesion!=null) {
@@ -388,8 +359,11 @@ public class Controlador implements ActionListener {
 			
 			sesion.getTransaction().commit();
 		}catch(Exception e) {
+			// En caso de error, realizar rollback
+            if (sesion != null) {
+                sesion.getTransaction().rollback();
+            }
 			e.printStackTrace();
-			sesion.getTransaction().getRollbackOnly();
 		}finally {
         	if(sesion!=null) {
         		sesion.close();
@@ -414,6 +388,10 @@ public class Controlador implements ActionListener {
 			
 			sesion.getTransaction().commit();
 		}catch(Exception e) {
+			// En caso de error, realizar rollback
+            if (sesion != null) {
+                sesion.getTransaction().rollback();
+            }
 			e.printStackTrace();
 		}finally {
         	if(sesion!=null) {
@@ -440,6 +418,10 @@ public class Controlador implements ActionListener {
 			
 			sesion.getTransaction().commit();
 		}catch(Exception e) {
+			// En caso de error, realizar rollback
+            if (sesion != null) {
+                sesion.getTransaction().rollback();
+            }
 			e.printStackTrace();
 		}finally {
         	if(sesion!=null) {
@@ -463,14 +445,18 @@ public class Controlador implements ActionListener {
 			
 			sesion.getTransaction().commit();
 		}catch(Exception e) {
+			// En caso de error, realizar rollback
+            if (sesion != null) {
+                sesion.getTransaction().rollback();
+            }
 			e.printStackTrace();
 		}finally {
         	if(sesion!=null) {
         		sesion.close();
         	}
-        }
-		
+        }		
 	}
+	
 	public void DropPuntos(SessionFactory session) {
 		Session sesion = null;
 		try {
@@ -490,6 +476,7 @@ public class Controlador implements ActionListener {
         	}
         }
 	}
+	
 	public void DropFavoritos(SessionFactory session) {
 		Session sesion = null;
 		try {
@@ -509,6 +496,7 @@ public class Controlador implements ActionListener {
         	}
         }
 	}
+	
 	public void iniciarLista() {
 		puntos.add(new PaisPuntos("Alemania",0));
 		puntos.add(new PaisPuntos("Espania",0));
