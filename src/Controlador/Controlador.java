@@ -24,6 +24,7 @@ public class Controlador implements ActionListener {
 	int votos18=0,votos26=0,votos41=0,votos66=0;
 	ArrayList<PaisPuntos> puntos = new ArrayList<PaisPuntos>();
 	String cantante;
+	
 	public Controlador(Vista vista) {
 		this.vista = vista;
 		vista.btnSimularVotaciones.addActionListener(this);
@@ -232,8 +233,8 @@ public class Controlador implements ActionListener {
 			this.vista.panelClasificacion.setVisible(true);
 		}
 		if (vista.btnAtrasClasificacion == e.getSource()) {
-			this.vista.panelVotaciones2.setVisible(true);
 			ocultarPaneles();
+			this.vista.panelVotaciones2.setVisible(true);
 		}		
 	}
 

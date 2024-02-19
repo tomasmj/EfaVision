@@ -9,22 +9,26 @@ import java.net.Socket;
 import Vista.Vista;
 
 public class Hilo extends Thread{
-	Vista vista = new Vista();
 	Socket socket = null;
+	
 	public Hilo(Socket s) {
-		this.socket=s;
-		
+		this.socket=s;	
 	}
-		public void run() {
-			setearV();
-			
-			
-		}
-	public void setearV() {
-
+	
+	public void run() {
 		try {
-			InputStreamReader isr = new InputStreamReader(socket.getInputStream());
-			BufferedReader br = new BufferedReader(isr);
+			imprimirCantantes();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}		
+	}
+	
+	public void imprimirCantantes() throws IOException {
+		InputStreamReader isr = null;
+		BufferedReader br = null;
+		try {
+			isr = new InputStreamReader(socket.getInputStream());
+			br = new BufferedReader(isr);
 			String tipo= br.readLine();
 			
 			if(tipo.equals("favorito")) {
@@ -39,20 +43,18 @@ public class Hilo extends Thread{
 				
 			} else if((tipo.equals("ganador"))) {
 				String ganador = br.readLine();
-				System.out.println("EL GANADOR DE EFAVISION ES: " + ganador);
-				
-			}
-			
-
-				
-		
-			
+				System.out.println("EL GANADOR DE EFAVISION ES: " + ganador);		
+			}	
 		} catch(Exception e) {
 			e.printStackTrace();
+		}finally {
+			if(isr!=null) {
+				isr.close();
+			}
+			
+			if(br!=null) {
+				br.close();
+			}
 		}
-		
-		
-		
-		
 	}
 }
