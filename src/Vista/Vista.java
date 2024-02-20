@@ -81,6 +81,323 @@ public class Vista extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+				panelVotaciones = new JPanel();
+				panelVotaciones.setBounds(0, 0, 1107, 845);
+				contentPane.add(panelVotaciones);
+				panelVotaciones.setLayout(null);
+				
+						lblBanderaEspaña = new JLabel("");
+						lblBanderaEspaña.setBackground(new Color(128, 0, 128));
+						lblBanderaEspaña.setBounds(36, 73, 117, 62);
+						panelVotaciones.add(lblBanderaEspaña);
+						lblBanderaEspaña.setIcon(new ImageIcon("src/Imagenes/espania.png"));
+						
+								lblEspaña = new JLabel("España");
+								lblEspaña.setFont(new Font("Tahoma", Font.BOLD, 20));
+								lblEspaña.setBounds(163, 105, 129, 30);
+								panelVotaciones.add(lblEspaña);
+								
+										lblTitulo = new JLabel("Clasificación por países");
+										lblTitulo.setForeground(new Color(255, 255, 255));
+										lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 30));
+										lblTitulo.setBounds(371, 10, 365, 53);
+										panelVotaciones.add(lblTitulo);
+										
+												lblCantanteEspaña1 = new JLabel("");
+												lblCantanteEspaña1.setBackground(new Color(128, 0, 128));
+												lblCantanteEspaña1.setBounds(216, 152, 76, 62);
+												panelVotaciones.add(lblCantanteEspaña1);
+												
+														lblPuntuacionEspaña1 = new JLabel("1º");
+														lblPuntuacionEspaña1.setBackground(new Color(128, 0, 128));
+														lblPuntuacionEspaña1.setFont(new Font("Tahoma", Font.BOLD, 20));
+														lblPuntuacionEspaña1.setBounds(36, 182, 30, 32);
+														panelVotaciones.add(lblPuntuacionEspaña1);
+														
+																lblPuntuacionEspaña2 = new JLabel("2º");
+																lblPuntuacionEspaña2.setFont(new Font("Tahoma", Font.BOLD, 20));
+																lblPuntuacionEspaña2.setBackground(new Color(128, 0, 128));
+																lblPuntuacionEspaña2.setBounds(36, 265, 30, 32);
+																panelVotaciones.add(lblPuntuacionEspaña2);
+																
+																		lblPaisEspaña1 = new JLabel("");
+																		lblPaisEspaña1.setFont(new Font("Tahoma", Font.BOLD, 20));
+																		lblPaisEspaña1.setBounds(76, 182, 130, 32);
+																		panelVotaciones.add(lblPaisEspaña1);
+																		
+																				lblPaisEspaña2 = new JLabel("");
+																				lblPaisEspaña2.setFont(new Font("Tahoma", Font.BOLD, 20));
+																				lblPaisEspaña2.setBounds(76, 265, 130, 32);
+																				panelVotaciones.add(lblPaisEspaña2);
+																				
+																						lblCantanteEspaña2 = new JLabel("");
+																						lblCantanteEspaña2.setBackground(new Color(128, 0, 128));
+																						lblCantanteEspaña2.setBounds(216, 235, 76, 62);
+																						panelVotaciones.add(lblCantanteEspaña2);
+																						
+																								lblPuntuacionEspaña3 = new JLabel("3º");
+																								lblPuntuacionEspaña3.setFont(new Font("Tahoma", Font.BOLD, 20));
+																								lblPuntuacionEspaña3.setBackground(new Color(128, 0, 128));
+																								lblPuntuacionEspaña3.setBounds(36, 344, 30, 32);
+																								panelVotaciones.add(lblPuntuacionEspaña3);
+																								
+																										lblPaisEspaña3 = new JLabel("");
+																										lblPaisEspaña3.setFont(new Font("Tahoma", Font.BOLD, 20));
+																										lblPaisEspaña3.setBounds(76, 344, 130, 32);
+																										panelVotaciones.add(lblPaisEspaña3);
+																										
+																												lblCantanteEspaña3 = new JLabel("");
+																												lblCantanteEspaña3.setBackground(new Color(128, 0, 128));
+																												lblCantanteEspaña3.setBounds(216, 317, 76, 62);
+																												panelVotaciones.add(lblCantanteEspaña3);
+																												
+																														lblPuntuacionAlemania3 = new JLabel("3º");
+																														lblPuntuacionAlemania3.setFont(new Font("Tahoma", Font.BOLD, 20));
+																														lblPuntuacionAlemania3.setBackground(new Color(128, 0, 128));
+																														lblPuntuacionAlemania3.setBounds(36, 672, 30, 32);
+																														panelVotaciones.add(lblPuntuacionAlemania3);
+																														
+																																lblPaisAlemania3 = new JLabel("");
+																																lblPaisAlemania3.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																lblPaisAlemania3.setBounds(76, 672, 130, 32);
+																																panelVotaciones.add(lblPaisAlemania3);
+																																
+																																		lblCantanteAlemania3 = new JLabel("");
+																																		lblCantanteAlemania3.setBackground(new Color(128, 0, 128));
+																																		lblCantanteAlemania3.setBounds(216, 645, 76, 62);
+																																		panelVotaciones.add(lblCantanteAlemania3);
+																																		
+																																				lblCantanteAlemania2 = new JLabel("");
+																																				lblCantanteAlemania2.setBackground(new Color(128, 0, 128));
+																																				lblCantanteAlemania2.setBounds(216, 563, 76, 62);
+																																				panelVotaciones.add(lblCantanteAlemania2);
+																																				
+																																						lblPaisAlemania2 = new JLabel("");
+																																						lblPaisAlemania2.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																						lblPaisAlemania2.setBounds(76, 593, 130, 32);
+																																						panelVotaciones.add(lblPaisAlemania2);
+																																						
+																																								lblPuntuacionAlemania2 = new JLabel("2º");
+																																								lblPuntuacionAlemania2.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																								lblPuntuacionAlemania2.setBackground(new Color(128, 0, 128));
+																																								lblPuntuacionAlemania2.setBounds(36, 593, 30, 32);
+																																								panelVotaciones.add(lblPuntuacionAlemania2);
+																																								
+																																										lblPuntuacionAlemania1 = new JLabel("1º");
+																																										lblPuntuacionAlemania1.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																										lblPuntuacionAlemania1.setBackground(new Color(128, 0, 128));
+																																										lblPuntuacionAlemania1.setBounds(36, 510, 30, 32);
+																																										panelVotaciones.add(lblPuntuacionAlemania1);
+																																										
+																																												lblPaisAlemania1 = new JLabel("");
+																																												lblPaisAlemania1.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																												lblPaisAlemania1.setBounds(76, 510, 130, 32);
+																																												panelVotaciones.add(lblPaisAlemania1);
+																																												
+																																														lblCantanteAlemania1 = new JLabel("");
+																																														lblCantanteAlemania1.setBackground(new Color(128, 0, 128));
+																																														lblCantanteAlemania1.setBounds(216, 480, 76, 62);
+																																														panelVotaciones.add(lblCantanteAlemania1);
+																																														
+																																																lblAlemania = new JLabel("Alemania");
+																																																lblAlemania.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																lblAlemania.setBounds(163, 433, 123, 30);
+																																																panelVotaciones.add(lblAlemania);
+																																																
+																																																		lblBanderaAlemania = new JLabel("");
+																																																		lblBanderaAlemania.setBackground(new Color(128, 0, 128));
+																																																		lblBanderaAlemania.setBounds(36, 401, 117, 62);
+																																																		panelVotaciones.add(lblBanderaAlemania);
+																																																		lblBanderaAlemania.setIcon(new ImageIcon("src/Imagenes/alemania.png"));
+																																																		
+																																																				lblFrancia = new JLabel("Francia");
+																																																				lblFrancia.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																				lblFrancia.setBounds(529, 105, 129, 30);
+																																																				panelVotaciones.add(lblFrancia);
+																																																				
+																																																						lblPuntuacionFrancia1 = new JLabel("1º");
+																																																						lblPuntuacionFrancia1.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																						lblPuntuacionFrancia1.setBackground(new Color(128, 0, 128));
+																																																						lblPuntuacionFrancia1.setBounds(402, 182, 30, 32);
+																																																						panelVotaciones.add(lblPuntuacionFrancia1);
+																																																						
+																																																								lblPaisFrancia1 = new JLabel("");
+																																																								lblPaisFrancia1.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																								lblPaisFrancia1.setBounds(442, 182, 130, 32);
+																																																								panelVotaciones.add(lblPaisFrancia1);
+																																																								
+																																																										lblCantanteFrancia1 = new JLabel("");
+																																																										lblCantanteFrancia1.setBackground(new Color(128, 0, 128));
+																																																										lblCantanteFrancia1.setBounds(582, 152, 76, 62);
+																																																										panelVotaciones.add(lblCantanteFrancia1);
+																																																										
+																																																												lblPuntuacionFrancia2 = new JLabel("2º");
+																																																												lblPuntuacionFrancia2.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																												lblPuntuacionFrancia2.setBackground(new Color(128, 0, 128));
+																																																												lblPuntuacionFrancia2.setBounds(402, 265, 30, 32);
+																																																												panelVotaciones.add(lblPuntuacionFrancia2);
+																																																												
+																																																														lblPaisFrancia2 = new JLabel("");
+																																																														lblPaisFrancia2.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																														lblPaisFrancia2.setBounds(442, 265, 130, 32);
+																																																														panelVotaciones.add(lblPaisFrancia2);
+																																																														
+																																																																lblCantanteFrancia2 = new JLabel("");
+																																																																lblCantanteFrancia2.setBackground(new Color(128, 0, 128));
+																																																																lblCantanteFrancia2.setBounds(582, 235, 76, 62);
+																																																																panelVotaciones.add(lblCantanteFrancia2);
+																																																																
+																																																																		lblPuntuacionFrancia3 = new JLabel("3º");
+																																																																		lblPuntuacionFrancia3.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																		lblPuntuacionFrancia3.setBackground(new Color(128, 0, 128));
+																																																																		lblPuntuacionFrancia3.setBounds(402, 344, 30, 32);
+																																																																		panelVotaciones.add(lblPuntuacionFrancia3);
+																																																																		
+																																																																				lblPaisFrancia3 = new JLabel("");
+																																																																				lblPaisFrancia3.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																				lblPaisFrancia3.setBounds(442, 344, 130, 32);
+																																																																				panelVotaciones.add(lblPaisFrancia3);
+																																																																				
+																																																																						lblCantanteFrancia3 = new JLabel("");
+																																																																						lblCantanteFrancia3.setBackground(new Color(128, 0, 128));
+																																																																						lblCantanteFrancia3.setBounds(582, 314, 76, 62);
+																																																																						panelVotaciones.add(lblCantanteFrancia3);
+																																																																						
+																																																																								lblPuntuacionItalia2 = new JLabel("2º");
+																																																																								lblPuntuacionItalia2.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																								lblPuntuacionItalia2.setBackground(new Color(128, 0, 128));
+																																																																								lblPuntuacionItalia2.setBounds(402, 593, 30, 32);
+																																																																								panelVotaciones.add(lblPuntuacionItalia2);
+																																																																								
+																																																																										lblBanderaItalia = new JLabel("");
+																																																																										lblBanderaItalia.setBackground(new Color(128, 0, 128));
+																																																																										lblBanderaItalia.setBounds(402, 401, 117, 62);
+																																																																										panelVotaciones.add(lblBanderaItalia);
+																																																																										lblBanderaItalia.setIcon(new ImageIcon("src/Imagenes/italia.png"));
+																																																																										
+																																																																												lblItalia = new JLabel("Italia");
+																																																																												lblItalia.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																												lblItalia.setBounds(529, 433, 129, 30);
+																																																																												panelVotaciones.add(lblItalia);
+																																																																												
+																																																																														lblPuntuacionItalia1 = new JLabel("1º");
+																																																																														lblPuntuacionItalia1.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																														lblPuntuacionItalia1.setBackground(new Color(128, 0, 128));
+																																																																														lblPuntuacionItalia1.setBounds(402, 510, 30, 32);
+																																																																														panelVotaciones.add(lblPuntuacionItalia1);
+																																																																														
+																																																																																lblPaisItalia1 = new JLabel("");
+																																																																																lblPaisItalia1.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																																lblPaisItalia1.setBounds(442, 510, 130, 32);
+																																																																																panelVotaciones.add(lblPaisItalia1);
+																																																																																
+																																																																																		lblCantanteItalia1 = new JLabel("");
+																																																																																		lblCantanteItalia1.setBackground(new Color(128, 0, 128));
+																																																																																		lblCantanteItalia1.setBounds(582, 480, 76, 62);
+																																																																																		panelVotaciones.add(lblCantanteItalia1);
+																																																																																		
+																																																																																				lblPaisItalia2 = new JLabel("");
+																																																																																				lblPaisItalia2.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																																				lblPaisItalia2.setBounds(442, 593, 130, 32);
+																																																																																				panelVotaciones.add(lblPaisItalia2);
+																																																																																				
+																																																																																						lblCantanteItalia2 = new JLabel("");
+																																																																																						lblCantanteItalia2.setBackground(new Color(128, 0, 128));
+																																																																																						lblCantanteItalia2.setBounds(582, 563, 76, 62);
+																																																																																						panelVotaciones.add(lblCantanteItalia2);
+																																																																																						
+																																																																																								lblPaisItalia3 = new JLabel("");
+																																																																																								lblPaisItalia3.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																																								lblPaisItalia3.setBounds(442, 672, 130, 32);
+																																																																																								panelVotaciones.add(lblPaisItalia3);
+																																																																																								
+																																																																																										lblPuntuacionItalia3 = new JLabel("3º");
+																																																																																										lblPuntuacionItalia3.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																																										lblPuntuacionItalia3.setBackground(new Color(128, 0, 128));
+																																																																																										lblPuntuacionItalia3.setBounds(402, 672, 30, 32);
+																																																																																										panelVotaciones.add(lblPuntuacionItalia3);
+																																																																																										
+																																																																																												lblCantanteItalia3 = new JLabel("");
+																																																																																												lblCantanteItalia3.setBackground(new Color(128, 0, 128));
+																																																																																												lblCantanteItalia3.setBounds(582, 642, 76, 62);
+																																																																																												panelVotaciones.add(lblCantanteItalia3);
+																																																																																												
+																																																																																														lblBanderaPortugal = new JLabel("");
+																																																																																														lblBanderaPortugal.setBackground(new Color(128, 0, 128));
+																																																																																														lblBanderaPortugal.setBounds(758, 73, 117, 62);
+																																																																																														panelVotaciones.add(lblBanderaPortugal);
+																																																																																														lblBanderaPortugal.setIcon(new ImageIcon("src/Imagenes/portugal.png"));
+																																																																																														
+																																																																																																lblPortugal = new JLabel("Portugal");
+																																																																																																lblPortugal.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																																																lblPortugal.setBounds(885, 105, 129, 30);
+																																																																																																panelVotaciones.add(lblPortugal);
+																																																																																																
+																																																																																																		lblPuntuacionPortugal1 = new JLabel("1º");
+																																																																																																		lblPuntuacionPortugal1.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																																																		lblPuntuacionPortugal1.setBackground(new Color(128, 0, 128));
+																																																																																																		lblPuntuacionPortugal1.setBounds(758, 182, 30, 32);
+																																																																																																		panelVotaciones.add(lblPuntuacionPortugal1);
+																																																																																																		
+																																																																																																				lblPaisPortugal = new JLabel("");
+																																																																																																				lblPaisPortugal.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																																																				lblPaisPortugal.setBounds(798, 182, 130, 32);
+																																																																																																				panelVotaciones.add(lblPaisPortugal);
+																																																																																																				
+																																																																																																						lblCantantePortugal1 = new JLabel("");
+																																																																																																						lblCantantePortugal1.setBackground(new Color(128, 0, 128));
+																																																																																																						lblCantantePortugal1.setBounds(938, 152, 76, 62);
+																																																																																																						panelVotaciones.add(lblCantantePortugal1);
+																																																																																																						
+																																																																																																								lblPaisPortugal2 = new JLabel("");
+																																																																																																								lblPaisPortugal2.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																																																								lblPaisPortugal2.setBounds(798, 265, 130, 32);
+																																																																																																								panelVotaciones.add(lblPaisPortugal2);
+																																																																																																								
+																																																																																																										lblCantantePortugal2 = new JLabel("");
+																																																																																																										lblCantantePortugal2.setBackground(new Color(128, 0, 128));
+																																																																																																										lblCantantePortugal2.setBounds(938, 235, 76, 62);
+																																																																																																										panelVotaciones.add(lblCantantePortugal2);
+																																																																																																										
+																																																																																																												lblPuntuacionPortugal2 = new JLabel("2º");
+																																																																																																												lblPuntuacionPortugal2.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																																																												lblPuntuacionPortugal2.setBackground(new Color(128, 0, 128));
+																																																																																																												lblPuntuacionPortugal2.setBounds(758, 265, 30, 32);
+																																																																																																												panelVotaciones.add(lblPuntuacionPortugal2);
+																																																																																																												
+																																																																																																														lblPuntuacionPortugal3 = new JLabel("3º");
+																																																																																																														lblPuntuacionPortugal3.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																																																														lblPuntuacionPortugal3.setBackground(new Color(128, 0, 128));
+																																																																																																														lblPuntuacionPortugal3.setBounds(758, 344, 30, 32);
+																																																																																																														panelVotaciones.add(lblPuntuacionPortugal3);
+																																																																																																														
+																																																																																																																lblPaisPortugal3 = new JLabel("");
+																																																																																																																lblPaisPortugal3.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																																																																lblPaisPortugal3.setBounds(798, 344, 130, 32);
+																																																																																																																panelVotaciones.add(lblPaisPortugal3);
+																																																																																																																
+																																																																																																																		lblCantantePortugal3 = new JLabel("");
+																																																																																																																		lblCantantePortugal3.setBackground(new Color(128, 0, 128));
+																																																																																																																		lblCantantePortugal3.setBounds(938, 314, 76, 62);
+																																																																																																																		panelVotaciones.add(lblCantantePortugal3);
+																																																																																																																		
+																																																																																																																				btnSiguiente = new JButton("Siguiente");
+																																																																																																																				btnSiguiente.setBackground(new Color(255, 255, 255));
+																																																																																																																				btnSiguiente.setFont(new Font("Tahoma", Font.BOLD, 20));
+																																																																																																																				btnSiguiente.setBounds(885, 682, 187, 53);
+																																																																																																																				panelVotaciones.add(btnSiguiente);
+																																																																																																																				
+																																																																																																																						lblBanderaFrancia = new JLabel("");
+																																																																																																																						lblBanderaFrancia.setBackground(new Color(128, 0, 128));
+																																																																																																																						lblBanderaFrancia.setBounds(402, 73, 117, 62);
+																																																																																																																						lblBanderaFrancia.setIcon(new ImageIcon("src/Imagenes/francia.png"));
+																																																																																																																						panelVotaciones.add(lblBanderaFrancia);
+																																																																																																																						
+																																																																																																																								lblFondoVotacion1 = new JLabel("");
+																																																																																																																								lblFondoVotacion1.setBounds(0, 0, 1107, 845);
+																																																																																																																								panelVotaciones.add(lblFondoVotacion1);
+																																																																																																																								lblFondoVotacion1.setIcon(new ImageIcon("src/Imagenes/fondoVotaciones.jpg"));
 
 		panelVotaciones2 = new JPanel();
 		panelVotaciones2.setLayout(null);
@@ -404,323 +721,6 @@ public class Vista extends JFrame {
 		lblFondoVotacion2.setBounds(0, 0, 1107, 845);
 		panelVotaciones2.add(lblFondoVotacion2);
 		lblFondoVotacion2.setIcon(new ImageIcon("src/Imagenes/fondoVotaciones.jpg"));
-
-		panelVotaciones = new JPanel();
-		panelVotaciones.setBounds(0, 0, 1107, 845);
-		contentPane.add(panelVotaciones);
-		panelVotaciones.setLayout(null);
-
-		lblBanderaEspaña = new JLabel("");
-		lblBanderaEspaña.setBackground(new Color(128, 0, 128));
-		lblBanderaEspaña.setBounds(36, 73, 117, 62);
-		panelVotaciones.add(lblBanderaEspaña);
-		lblBanderaEspaña.setIcon(new ImageIcon("src/Imagenes/espania.png"));
-
-		lblEspaña = new JLabel("España");
-		lblEspaña.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblEspaña.setBounds(163, 105, 129, 30);
-		panelVotaciones.add(lblEspaña);
-
-		lblTitulo = new JLabel("Clasificación por países");
-		lblTitulo.setForeground(new Color(255, 255, 255));
-		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblTitulo.setBounds(371, 10, 365, 53);
-		panelVotaciones.add(lblTitulo);
-
-		lblCantanteEspaña1 = new JLabel("");
-		lblCantanteEspaña1.setBackground(new Color(128, 0, 128));
-		lblCantanteEspaña1.setBounds(216, 152, 76, 62);
-		panelVotaciones.add(lblCantanteEspaña1);
-
-		lblPuntuacionEspaña1 = new JLabel("1º");
-		lblPuntuacionEspaña1.setBackground(new Color(128, 0, 128));
-		lblPuntuacionEspaña1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionEspaña1.setBounds(36, 182, 30, 32);
-		panelVotaciones.add(lblPuntuacionEspaña1);
-
-		lblPuntuacionEspaña2 = new JLabel("2º");
-		lblPuntuacionEspaña2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionEspaña2.setBackground(new Color(128, 0, 128));
-		lblPuntuacionEspaña2.setBounds(36, 265, 30, 32);
-		panelVotaciones.add(lblPuntuacionEspaña2);
-
-		lblPaisEspaña1 = new JLabel("");
-		lblPaisEspaña1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisEspaña1.setBounds(76, 182, 130, 32);
-		panelVotaciones.add(lblPaisEspaña1);
-
-		lblPaisEspaña2 = new JLabel("");
-		lblPaisEspaña2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisEspaña2.setBounds(76, 265, 130, 32);
-		panelVotaciones.add(lblPaisEspaña2);
-
-		lblCantanteEspaña2 = new JLabel("");
-		lblCantanteEspaña2.setBackground(new Color(128, 0, 128));
-		lblCantanteEspaña2.setBounds(216, 235, 76, 62);
-		panelVotaciones.add(lblCantanteEspaña2);
-
-		lblPuntuacionEspaña3 = new JLabel("3º");
-		lblPuntuacionEspaña3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionEspaña3.setBackground(new Color(128, 0, 128));
-		lblPuntuacionEspaña3.setBounds(36, 344, 30, 32);
-		panelVotaciones.add(lblPuntuacionEspaña3);
-
-		lblPaisEspaña3 = new JLabel("");
-		lblPaisEspaña3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisEspaña3.setBounds(76, 344, 130, 32);
-		panelVotaciones.add(lblPaisEspaña3);
-
-		lblCantanteEspaña3 = new JLabel("");
-		lblCantanteEspaña3.setBackground(new Color(128, 0, 128));
-		lblCantanteEspaña3.setBounds(216, 317, 76, 62);
-		panelVotaciones.add(lblCantanteEspaña3);
-
-		lblPuntuacionAlemania3 = new JLabel("3º");
-		lblPuntuacionAlemania3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionAlemania3.setBackground(new Color(128, 0, 128));
-		lblPuntuacionAlemania3.setBounds(36, 672, 30, 32);
-		panelVotaciones.add(lblPuntuacionAlemania3);
-
-		lblPaisAlemania3 = new JLabel("");
-		lblPaisAlemania3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisAlemania3.setBounds(76, 672, 130, 32);
-		panelVotaciones.add(lblPaisAlemania3);
-
-		lblCantanteAlemania3 = new JLabel("");
-		lblCantanteAlemania3.setBackground(new Color(128, 0, 128));
-		lblCantanteAlemania3.setBounds(216, 645, 76, 62);
-		panelVotaciones.add(lblCantanteAlemania3);
-
-		lblCantanteAlemania2 = new JLabel("");
-		lblCantanteAlemania2.setBackground(new Color(128, 0, 128));
-		lblCantanteAlemania2.setBounds(216, 563, 76, 62);
-		panelVotaciones.add(lblCantanteAlemania2);
-
-		lblPaisAlemania2 = new JLabel("");
-		lblPaisAlemania2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisAlemania2.setBounds(76, 593, 130, 32);
-		panelVotaciones.add(lblPaisAlemania2);
-
-		lblPuntuacionAlemania2 = new JLabel("2º");
-		lblPuntuacionAlemania2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionAlemania2.setBackground(new Color(128, 0, 128));
-		lblPuntuacionAlemania2.setBounds(36, 593, 30, 32);
-		panelVotaciones.add(lblPuntuacionAlemania2);
-
-		lblPuntuacionAlemania1 = new JLabel("1º");
-		lblPuntuacionAlemania1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionAlemania1.setBackground(new Color(128, 0, 128));
-		lblPuntuacionAlemania1.setBounds(36, 510, 30, 32);
-		panelVotaciones.add(lblPuntuacionAlemania1);
-
-		lblPaisAlemania1 = new JLabel("");
-		lblPaisAlemania1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisAlemania1.setBounds(76, 510, 130, 32);
-		panelVotaciones.add(lblPaisAlemania1);
-
-		lblCantanteAlemania1 = new JLabel("");
-		lblCantanteAlemania1.setBackground(new Color(128, 0, 128));
-		lblCantanteAlemania1.setBounds(216, 480, 76, 62);
-		panelVotaciones.add(lblCantanteAlemania1);
-
-		lblAlemania = new JLabel("Alemania");
-		lblAlemania.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblAlemania.setBounds(163, 433, 123, 30);
-		panelVotaciones.add(lblAlemania);
-
-		lblBanderaAlemania = new JLabel("");
-		lblBanderaAlemania.setBackground(new Color(128, 0, 128));
-		lblBanderaAlemania.setBounds(36, 401, 117, 62);
-		panelVotaciones.add(lblBanderaAlemania);
-		lblBanderaAlemania.setIcon(new ImageIcon("src/Imagenes/alemania.png"));
-
-		lblFrancia = new JLabel("Francia");
-		lblFrancia.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblFrancia.setBounds(529, 105, 129, 30);
-		panelVotaciones.add(lblFrancia);
-
-		lblPuntuacionFrancia1 = new JLabel("1º");
-		lblPuntuacionFrancia1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionFrancia1.setBackground(new Color(128, 0, 128));
-		lblPuntuacionFrancia1.setBounds(402, 182, 30, 32);
-		panelVotaciones.add(lblPuntuacionFrancia1);
-
-		lblPaisFrancia1 = new JLabel("");
-		lblPaisFrancia1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisFrancia1.setBounds(442, 182, 130, 32);
-		panelVotaciones.add(lblPaisFrancia1);
-
-		lblCantanteFrancia1 = new JLabel("");
-		lblCantanteFrancia1.setBackground(new Color(128, 0, 128));
-		lblCantanteFrancia1.setBounds(582, 152, 76, 62);
-		panelVotaciones.add(lblCantanteFrancia1);
-
-		lblPuntuacionFrancia2 = new JLabel("2º");
-		lblPuntuacionFrancia2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionFrancia2.setBackground(new Color(128, 0, 128));
-		lblPuntuacionFrancia2.setBounds(402, 265, 30, 32);
-		panelVotaciones.add(lblPuntuacionFrancia2);
-
-		lblPaisFrancia2 = new JLabel("");
-		lblPaisFrancia2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisFrancia2.setBounds(442, 265, 130, 32);
-		panelVotaciones.add(lblPaisFrancia2);
-
-		lblCantanteFrancia2 = new JLabel("");
-		lblCantanteFrancia2.setBackground(new Color(128, 0, 128));
-		lblCantanteFrancia2.setBounds(582, 235, 76, 62);
-		panelVotaciones.add(lblCantanteFrancia2);
-
-		lblPuntuacionFrancia3 = new JLabel("3º");
-		lblPuntuacionFrancia3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionFrancia3.setBackground(new Color(128, 0, 128));
-		lblPuntuacionFrancia3.setBounds(402, 344, 30, 32);
-		panelVotaciones.add(lblPuntuacionFrancia3);
-
-		lblPaisFrancia3 = new JLabel("");
-		lblPaisFrancia3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisFrancia3.setBounds(442, 344, 130, 32);
-		panelVotaciones.add(lblPaisFrancia3);
-
-		lblCantanteFrancia3 = new JLabel("");
-		lblCantanteFrancia3.setBackground(new Color(128, 0, 128));
-		lblCantanteFrancia3.setBounds(582, 314, 76, 62);
-		panelVotaciones.add(lblCantanteFrancia3);
-
-		lblPuntuacionItalia2 = new JLabel("2º");
-		lblPuntuacionItalia2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionItalia2.setBackground(new Color(128, 0, 128));
-		lblPuntuacionItalia2.setBounds(402, 593, 30, 32);
-		panelVotaciones.add(lblPuntuacionItalia2);
-
-		lblBanderaItalia = new JLabel("");
-		lblBanderaItalia.setBackground(new Color(128, 0, 128));
-		lblBanderaItalia.setBounds(402, 401, 117, 62);
-		panelVotaciones.add(lblBanderaItalia);
-		lblBanderaItalia.setIcon(new ImageIcon("src/Imagenes/italia.png"));
-
-		lblItalia = new JLabel("Italia");
-		lblItalia.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblItalia.setBounds(529, 433, 129, 30);
-		panelVotaciones.add(lblItalia);
-
-		lblPuntuacionItalia1 = new JLabel("1º");
-		lblPuntuacionItalia1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionItalia1.setBackground(new Color(128, 0, 128));
-		lblPuntuacionItalia1.setBounds(402, 510, 30, 32);
-		panelVotaciones.add(lblPuntuacionItalia1);
-
-		lblPaisItalia1 = new JLabel("");
-		lblPaisItalia1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisItalia1.setBounds(442, 510, 130, 32);
-		panelVotaciones.add(lblPaisItalia1);
-
-		lblCantanteItalia1 = new JLabel("");
-		lblCantanteItalia1.setBackground(new Color(128, 0, 128));
-		lblCantanteItalia1.setBounds(582, 480, 76, 62);
-		panelVotaciones.add(lblCantanteItalia1);
-
-		lblPaisItalia2 = new JLabel("");
-		lblPaisItalia2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisItalia2.setBounds(442, 593, 130, 32);
-		panelVotaciones.add(lblPaisItalia2);
-
-		lblCantanteItalia2 = new JLabel("");
-		lblCantanteItalia2.setBackground(new Color(128, 0, 128));
-		lblCantanteItalia2.setBounds(582, 563, 76, 62);
-		panelVotaciones.add(lblCantanteItalia2);
-
-		lblPaisItalia3 = new JLabel("");
-		lblPaisItalia3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisItalia3.setBounds(442, 672, 130, 32);
-		panelVotaciones.add(lblPaisItalia3);
-
-		lblPuntuacionItalia3 = new JLabel("3º");
-		lblPuntuacionItalia3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionItalia3.setBackground(new Color(128, 0, 128));
-		lblPuntuacionItalia3.setBounds(402, 672, 30, 32);
-		panelVotaciones.add(lblPuntuacionItalia3);
-
-		lblCantanteItalia3 = new JLabel("");
-		lblCantanteItalia3.setBackground(new Color(128, 0, 128));
-		lblCantanteItalia3.setBounds(582, 642, 76, 62);
-		panelVotaciones.add(lblCantanteItalia3);
-
-		lblBanderaPortugal = new JLabel("");
-		lblBanderaPortugal.setBackground(new Color(128, 0, 128));
-		lblBanderaPortugal.setBounds(758, 73, 117, 62);
-		panelVotaciones.add(lblBanderaPortugal);
-		lblBanderaPortugal.setIcon(new ImageIcon("src/Imagenes/portugal.png"));
-
-		lblPortugal = new JLabel("Portugal");
-		lblPortugal.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPortugal.setBounds(885, 105, 129, 30);
-		panelVotaciones.add(lblPortugal);
-
-		lblPuntuacionPortugal1 = new JLabel("1º");
-		lblPuntuacionPortugal1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionPortugal1.setBackground(new Color(128, 0, 128));
-		lblPuntuacionPortugal1.setBounds(758, 182, 30, 32);
-		panelVotaciones.add(lblPuntuacionPortugal1);
-
-		lblPaisPortugal = new JLabel("");
-		lblPaisPortugal.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisPortugal.setBounds(798, 182, 130, 32);
-		panelVotaciones.add(lblPaisPortugal);
-
-		lblCantantePortugal1 = new JLabel("");
-		lblCantantePortugal1.setBackground(new Color(128, 0, 128));
-		lblCantantePortugal1.setBounds(938, 152, 76, 62);
-		panelVotaciones.add(lblCantantePortugal1);
-
-		lblPaisPortugal2 = new JLabel("");
-		lblPaisPortugal2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisPortugal2.setBounds(798, 265, 130, 32);
-		panelVotaciones.add(lblPaisPortugal2);
-
-		lblCantantePortugal2 = new JLabel("");
-		lblCantantePortugal2.setBackground(new Color(128, 0, 128));
-		lblCantantePortugal2.setBounds(938, 235, 76, 62);
-		panelVotaciones.add(lblCantantePortugal2);
-
-		lblPuntuacionPortugal2 = new JLabel("2º");
-		lblPuntuacionPortugal2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionPortugal2.setBackground(new Color(128, 0, 128));
-		lblPuntuacionPortugal2.setBounds(758, 265, 30, 32);
-		panelVotaciones.add(lblPuntuacionPortugal2);
-
-		lblPuntuacionPortugal3 = new JLabel("3º");
-		lblPuntuacionPortugal3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPuntuacionPortugal3.setBackground(new Color(128, 0, 128));
-		lblPuntuacionPortugal3.setBounds(758, 344, 30, 32);
-		panelVotaciones.add(lblPuntuacionPortugal3);
-
-		lblPaisPortugal3 = new JLabel("");
-		lblPaisPortugal3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblPaisPortugal3.setBounds(798, 344, 130, 32);
-		panelVotaciones.add(lblPaisPortugal3);
-
-		lblCantantePortugal3 = new JLabel("");
-		lblCantantePortugal3.setBackground(new Color(128, 0, 128));
-		lblCantantePortugal3.setBounds(938, 314, 76, 62);
-		panelVotaciones.add(lblCantantePortugal3);
-
-		btnSiguiente = new JButton("Siguiente");
-		btnSiguiente.setBackground(new Color(255, 255, 255));
-		btnSiguiente.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnSiguiente.setBounds(885, 682, 187, 53);
-		panelVotaciones.add(btnSiguiente);
-
-		lblBanderaFrancia = new JLabel("");
-		lblBanderaFrancia.setBackground(new Color(128, 0, 128));
-		lblBanderaFrancia.setBounds(383, 73, 117, 62);
-		lblBanderaFrancia.setIcon(new ImageIcon("src/Imagenes/francia.png"));
-		panelVotaciones.add(lblBanderaFrancia);
-
-		lblFondoVotacion1 = new JLabel("");
-		lblFondoVotacion1.setBounds(0, 0, 1107, 845);
-		panelVotaciones.add(lblFondoVotacion1);
-		lblFondoVotacion1.setIcon(new ImageIcon("src/Imagenes/fondoVotaciones.jpg"));
 
 		panelInicial = new JPanel();
 		panelInicial.setBounds(0, 0, 1107, 845);

@@ -12,7 +12,7 @@ public class Puntos extends Thread {
 	public void run() {
 		votar();
 		try {
-			Thread.sleep(200);
+			Thread.sleep(2);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
