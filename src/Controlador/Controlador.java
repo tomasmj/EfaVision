@@ -42,28 +42,36 @@ public class Controlador implements ActionListener {
 		if(vista.btnSimularVotaciones == e.getSource()) {
 			SessionFactory sesion = null;
 			try {
+				//Creamos configuracion de hibernate
 				Configuration configuracion = new Configuration();
 				configuracion.configure("hibernate.cfg.xml");
 				sesion = configuracion.buildSessionFactory();
 				System.out.println("Conexion a la base de datos realizada");
+				//Quitamos la tabla favoritos y de puntos.
 				DropFavoritos(sesion);
 				DropPuntos(sesion);
+				//Creamos de nuevo las tablas de favoritos y de puntos
 				crearTablaFavoritos(sesion);
 				System.out.println("Crear tabla favoritos");
 				crearTablaPuntos(sesion);
 				System.out.println("Crear tabla puntos");
+				//obtenemos una lista con los objetos de la consulta de la tabla PorcentajesRangoEdad
 				List<PorcentajesRangoedad> porcentajes = obtenerPorcentajes(sesion);
 				
+				//Aqui insertamos los paises con valor en puntos = 0
 				for(int i = 0;i<porcentajes.size();i++) {
 					insertarPaises(sesion, porcentajes.get(i).getNombrePais());
 				}
 
 				for(int i=0;i<porcentajes.size();i++) {
+					//Aqui recorremos todos los paises y recojemos su nombre
 					String paisVotando=porcentajes.get(i).getNombrePais();
 					System.out.println(paisVotando);
+					//Recogemos un entero del numero de votos que va a tener cada pais segun el rango de edad
+					//Se llama un metodo donde se inicializa el hilo para sacar el random que vota, el numero de veces se tiene que ejecutar y la edad que vota
 					votos18=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRango1825()/100))/500000);
 					votar(votos18,18);
-					
+					//Igual con todos los rangos de edad
 					votos26=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRango2640()/100))/500000);
 					votar(votos26,26);
 					
@@ -72,12 +80,14 @@ public class Controlador implements ActionListener {
 					
 					votos66=(int) (((double)porcentajes.get(i).getTotalHabitantes()*((double)porcentajes.get(i).getRangoMas66()/100))/500000);
 					votar(votos66,66);
-					
+					//El array de la clase PaisPuntos que tenemos creado lo ordenamos segun los puntos de mayor a menor
 			        Collections.sort(puntos, Comparator.comparingInt(PaisPuntos::getPuntos).reversed());
 			        System.out.println(puntos.toString());
-
+			        //se recogen los 3 primeros paises de la lista y se llama a un metodo que inserta en una tabla los puntos de los 3 primeros paises de cada pais
+			        
 			        String pais1=puntos.get(0).getPais();
 			        updatePuntos(sesion, pais1, 15);
+			        //Segun el pais que haya ganado nos devuelve el nombre del cantante y lo guardamos en un String para luego imprimir la foto segun el resultado
 			        String cantante1=devolverCantante(sesion, pais1);
 
 			        String pais2=puntos.get(1).getPais();
@@ -87,11 +97,13 @@ public class Controlador implements ActionListener {
 			        String pais3=puntos.get(2).getPais();
 			        updatePuntos(sesion, pais3, 8);
 			        String cantante3=devolverCantante(sesion, pais3);
-			        
+			        //Aqui se inserta en la tabla favoritos en pais que vota y sus 3 favoritos
 			        insertarFavoritos(sesion, paisVotando, pais1, pais2, pais3);
-			        
+			        //Llamamos al cliente que le pase al servidor los datos del pais que votay sus 3 favoritos para que cree un hilo
+			        // y devuelva la informacion al cliente
 			        Cliente c = new Cliente("favorito",paisVotando, pais1, pais2, pais3);
 			        c.votar();
+			        //Segun el pais que vota y los resultados de sus favoritos vamos editando los labels que apareceran en la vista
 			        if(paisVotando.equalsIgnoreCase("Alemania")) {
 			        	vista.lblPaisAlemania1.setText(pais1);
 			        	vista.lblCantanteAlemania1.setIcon(new ImageIcon("src/Cantantes/"+cantante1+".png"));
@@ -167,10 +179,13 @@ public class Controlador implements ActionListener {
 			        puntos.removeAll(puntos);
 			        iniciarLista();
 				}	
+				//Guardamos los datos obtenidos de una consulta al ganador total ordenados por puntos de manera descendente
 				List<String> paisesOrdenados = devolverGanador(sesion);
 				Cliente c1 = new Cliente("ganador",paisesOrdenados.get(0));
 				c1.votar();
+				//Aqui seteamos los labels de la clasificacion segun el orden de la lista
 				vista.lblPaisClasificacion1.setText(paisesOrdenados.get(0));
+				//devolvemos el nombre del cantante para poder setear el label con la imagen del cantante
 				cantante=devolverCantante(sesion, paisesOrdenados.get(0));
 				vista.lblCantanteClasificacion1.setIcon(new ImageIcon("src/Cantantes/"+cantante+".png"));
 				
@@ -259,7 +274,7 @@ public class Controlador implements ActionListener {
 			votos--;
 		}
 	}
-	
+	//Este metodo espera a que se vea la barra de progreso al 100% durante 1 segundo antes de pasar a los resultados
 	public  void esperar() {
         Timer timer = new Timer(); 
         TimerTask task = new TimerTask() {

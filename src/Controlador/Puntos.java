@@ -12,13 +12,14 @@ public class Puntos extends Thread {
 	public void run() {
 		votar();
 		try {
-			Thread.sleep(2);
+			Thread.sleep(200);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
 
 	public void votar() {
+		//sacamos un random para votar y le ponemos los valores segun el rango de edad que indica el enunciado
 		int randomn = (int) (1 + Math.random() * 100);
 		if (edad == 18) {
 			if (randomn >= 1 && randomn <= 7) {
@@ -110,7 +111,7 @@ public class Puntos extends Thread {
 			}
 		}
 	}
-
+	//Este metodo lo usamos para que devulve el voto de cada hilo
 	public String getPais() {
 		return pais;
 	}
